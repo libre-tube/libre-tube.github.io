@@ -194,7 +194,6 @@ p {
 	padding: 10px;
 	margin: 16px;
 	margin-left: 0;
-	background-color: transparent;
 	color: white;
 	border: 2px solid #cc322d;
 	font-size: 1.6rem;
@@ -211,7 +210,8 @@ p {
 
 #download {
 	background-image: url(assets/backgroundmobile.png);
-	background-size: cover;
+	background-repeat: no-repeat;
+    background-size: contain;
 	background-position: top center;
 	position: relative;
 	height: 100%;
