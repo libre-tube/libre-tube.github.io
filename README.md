@@ -1,3 +1,3 @@
 # [LibreTube Website](https://libre-tube.github.io)
 
-Feel free to report bugs concerning the website in the issues tab or suggest changes or features.
+Feel free to report bugs concerning the website or suggest changes or features in the issues tab.
