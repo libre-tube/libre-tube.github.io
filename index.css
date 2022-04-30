@@ -211,7 +211,7 @@ p {
 #download {
 	background-image: url(assets/backgroundmobile.png);
 	background-repeat: no-repeat;
-    background-size: auto;
+    background-size: contain;
 	background-position: top center;
 	position: relative;
 	height: 100%;
