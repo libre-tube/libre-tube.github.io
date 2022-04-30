@@ -211,7 +211,7 @@ p {
 #download {
 	background-image: url(assets/backgroundmobile.png);
 	background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 	background-position: top center;
 	position: relative;
 	height: 100%;
@@ -400,21 +400,13 @@ p {
 		padding: 16px 24px;
 	}
 
-	h1.section-title,
-	.content h1 {
-		font-size: 6rem;
-	}
-
 	#demo-images {
 		display: flex;
 	}
 
 	#download {
 		background-image: url(assets/background.png);
-	}
-
-	#download h1 {
-		font-size: 7rem;
+		background-size: contain;
 	}
 }
 
@@ -441,5 +433,10 @@ p {
 
 	#header .nav-list ul a:after {
 		display: none;
+	}
+	
+	#download h1,
+	.content h1 {
+		font-size: 6rem;
 	}
 }
