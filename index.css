@@ -1,43 +1,37 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
-
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
-
 html {
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
 	background: #201a1a;
+	color: #FFFFFF;
+	letter-spacing: 0.1rem;
 }
-
-.brand a {
+a {
+	color: #FFFFFF;
 	text-decoration: none;
 }
-
 .brand h1 {
 	font-size: 3rem;
 	text-transform: uppercase;
-	color: white;
 }
-
 .brand h1 span {
 	color: #cc322d;
 }
-
 #header {
 	position: fixed;
 	z-index: 1000;
 	width: 100vw;
 	height: auto;
 }
-
 #header .header {
 	min-height: 8vh;
 }
-
 #header .nav-bar {
 	display: flex;
 	align-items: center;
@@ -47,7 +41,6 @@ html {
 	max-width: 1300px;
 	padding: 0 10px;
 }
-
 #header .nav-list ul {
 	list-style: none;
 	position: absolute;
@@ -62,44 +55,35 @@ html {
 	z-index: 1;
 	transition: 0.5s ease left;
 }
-
 #header .nav-list ul.active {
 	left: 0%;
 }
-
 #header .nav-list ul a {
 	font-size: 2.5rem;
 	font-weight: 500;
 	letter-spacing: 0.2rem;
-	text-decoration: none;
-	color: white;
 	text-transform: uppercase;
 	padding: 20px;
 	display: block;
 }
-
 #header .nav-list ul a::after {
 	content: attr(data-after);
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
-	color: rgba(240, 248, 255, 0.021);
 	font-size: 13rem;
 	letter-spacing: 50px;
 	z-index: -1;
 	transition: 0.3s ease letter-spacing;
 }
-
 #header .nav-list ul li:hover a::after {
 	transform: translate(-50%, -50%) scale(1);
 	letter-spacing: initial;
 }
-
 #header .nav-list ul li:hover a {
 	color: #cc322d;
 }
-
 #header .hamburger {
 	height: 60px;
 	width: 60px;
@@ -114,7 +98,6 @@ html {
 	cursor: pointer;
 	transform: scale(0.8);
 }
-
 #header .hamburger:after {
 	position: absolute;
 	content: '';
@@ -124,43 +107,35 @@ html {
 	border-radius: 50%;
 	animation: hamburger_puls 1s ease infinite;
 }
-
 #header .hamburger .bar {
 	height: 2px;
 	width: 30px;
 	position: relative;
-	background-color: white;
+	background-color: #FFFFFF;
 	z-index: -1;
 }
-
-#header .hamburger .bar::after,
-#header .hamburger .bar::before {
+#header .hamburger .bar::after,#header .hamburger .bar::before {
 	content: '';
 	position: absolute;
 	height: 100%;
 	width: 100%;
 	left: 0;
-	background-color: white;
+	background-color: #FFFFFF;
 	transition: 0.3s ease;
 	transition-property: top, bottom;
 }
-
 #header .hamburger .bar::after {
 	top: 8px;
 }
-
 #header .hamburger .bar::before {
 	bottom: 8px;
 }
-
 #header .hamburger.active .bar::before {
 	bottom: 0;
 }
-
 #header .hamburger.active .bar::after {
 	top: 0;
 }
-
 .container {
 	min-height: 100vh;
 	width: 100%;
@@ -168,44 +143,35 @@ html {
 	align-items: center;
 	justify-content: center;
 }
-
 #download a {
 	display: inline-block;
 	padding: 10px;
 	margin: 16px;
 	margin-left: 0;
-	color: white;
 	border: 2px solid #cc322d;
 	font-size: 1.6rem;
-	letter-spacing: 0.1rem;
 	text-transform: uppercase;
-	text-decoration: none;
 	transition: 0.3s ease;
 	transition-property: background-color, color;
 }
-
 #download a:hover {
-	color: white;
 	background-color: #cc322d;
 }
-
 #download {
 	background-image: url(assets/backgroundmobile.png);
 	background-repeat: no-repeat;
-    background-size: cover;
+	background-size: cover;
 	background-position: top center;
 	position: relative;
 	height: 100%;
 	width: 100%;
 }
-
 #download .download {
 	max-width: 1400px;
 	margin: 0 auto;
 	padding: 0 50px;
 	justify-content: flex-start;
 }
-
 #download h1 {
 	display: block;
 	width: fit-content;
@@ -215,20 +181,16 @@ html {
 	animation: text_reveal 0.5s ease forwards;
 	animation-delay: 1s;
 }
-
 #download h1:nth-child(1) {
 	animation-delay: 1s;
 }
-
 #download h1:nth-child(2) {
 	animation-delay: 2s;
 }
-
 #download h1:nth-child(3) {
 	animation: text_reveal_name 0.5s ease forwards;
 	animation-delay: 3s;
 }
-
 #download h1 span {
 	position: absolute;
 	top: 0;
@@ -239,166 +201,129 @@ html {
 	animation: text_reveal_box 1s ease;
 	animation-delay: 0.5s;
 }
-
 #download h1:nth-child(1) span {
 	animation-delay: 0.5s;
 }
-
 #download h1:nth-child(2) span {
 	animation-delay: 1.5s;
 }
-
 #download h1:nth-child(3) span {
 	animation-delay: 2.5s;
 }
-
 .content {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	color: white;
 }
-
 .content div {
 	margin: 0 8px;
 }
-
 .content h1 {
 	font-size: 4rem;
 	margin: 32px;
 }
-
 .content h2 {
 	margin-top: 16px;
 	font-size: 3rem;
 }
-
 .content p {
 	font-size: 2rem;
-	color: white;
 	line-height: 2.5rem;
-	letter-spacing: 0.05rem;
 }
-
 #features ul li {
 	font-size: 2.5rem;
 	margin: 4px 0;
 }
-
 #demo-images {
 	display: none;
 	margin: 32px;
 	margin-bottom: 0;
 }
-
 #demo-images img {
 	border-radius: 12px;
 	margin: 16px;
 	height: 45vh;
 }
-
 #faq a {
-	text-decoration: none;
 	color: #cc322d;
 }
-
 #btc {
 	word-wrap: break-word;
 }
-
 #footer {
 	background-image: linear-gradient(60deg, #2b2929 0%, #373737 100%);
 }
-
 #footer .footer {
 	min-height: 200px;
 	flex-direction: column;
 	padding-top: 32px;
 	padding-bottom: 10px;
 }
-
 #footer h2 {
-	color: white;
 	font-weight: 500;
 	font-size: 1.8rem;
-	letter-spacing: 0.1rem;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-
 #social-icons {
 	display: flex;
 	margin-bottom: 16px;
 	filter: invert(0.8)
 }
-
 #social-icons a img {
 	height: 32px;
 	width: 32px;
 	margin: 0 8px;
 }
-
 #footer p {
-	color: white;
 	font-size: 1.3rem;
 }
-
 @keyframes hamburger_puls {
 	0% {
 		opacity: 1;
 		transform: scale(1);
 	}
-
 	100% {
 		opacity: 0;
 		transform: scale(1.4);
 	}
 }
-
 @keyframes text_reveal_box {
 	50% {
 		width: 100%;
 		left: 0;
 	}
-
 	100% {
 		width: 0;
 		left: 100%;
 	}
 }
-
 @keyframes text_reveal {
 	100% {
-		color: white;
+		color: #FFFFFF;
 	}
 }
-
 @keyframes text_reveal_name {
 	100% {
 		color: #cc322d;
 		font-weight: 500;
 	}
 }
-
 @media only screen and (min-width: 768px) {
-
 	#demo-images {
 		display: flex;
 	}
-
 	#download {
 		background-image: url(assets/background.png);
 		background-size: contain;
 	}
 }
-
 @media only screen and (min-width: 1200px) {
-	#header .hamburger {
+	#header .hamburger,#header .nav-list ul a:after {
 		display: none;
 	}
-
 	#header .nav-list ul {
 		position: initial;
 		display: block;
@@ -406,24 +331,15 @@ html {
 		width: fit-content;
 		background-color: transparent;
 	}
-
 	#header .nav-list ul li {
 		display: inline-block;
 	}
-
 	#header .nav-list ul li a {
 		font-size: 1.8rem;
 	}
-
-	#header .nav-list ul a:after {
-		display: none;
-	}
-	
-	#download h1,
-	.content h1 {
+	#download h1,.content h1 {
 		font-size: 6rem;
 	}
-	
 	#download a {
 		font-size: 2.5rem;
 		padding: 16px 24px;
