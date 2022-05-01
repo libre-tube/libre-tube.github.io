@@ -10,7 +10,6 @@ html {
 	scroll-behavior: smooth;
 	background: #201a1a;
 	color: #FFFFFF;
-	letter-spacing: 0.1rem;
 }
 a {
 	color: #FFFFFF;
@@ -150,6 +149,7 @@ a {
 	margin-left: 0;
 	border: 2px solid #cc322d;
 	font-size: 1.6rem;
+	letter-spacing: 0.1rem;
 	text-transform: uppercase;
 	transition: 0.3s ease;
 	transition-property: background-color, color;
@@ -212,17 +212,13 @@ a {
 }
 .content {
 	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	text-align: center;
-}
-.content div {
-	margin: 0 8px;
+	display: flex;
+	justify-content: center;
 }
 .content h1 {
 	font-size: 4rem;
-	margin: 32px;
+	margin: 16px;
 }
 .content h2 {
 	margin-top: 16px;
@@ -232,19 +228,56 @@ a {
 	font-size: 2rem;
 	line-height: 2.5rem;
 }
+#features {
+	display: flex;
+	flex-direction: column;
+}
+#features div {
+	margin: auto;
+}
 #features ul li {
 	font-size: 2.5rem;
 	margin: 4px 0;
+	list-style-position: inside;
 }
-#demo-images {
-	display: none;
-	margin: 32px;
-	margin-bottom: 0;
+.slideshow-container {
+  max-width: 90vw;
+  position: relative;
 }
-#demo-images img {
-	border-radius: 12px;
-	margin: 16px;
-	height: 45vh;
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+}
+.prev {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: #000;
+  opacity: 0.8;
+}
+.mySlides {
+  display: none;
+  width: 100%;
+  border-radius: 30px;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+#faq {
+	flex-direction: column;
 }
 #faq a {
 	color: #cc322d;
@@ -311,10 +344,11 @@ a {
 		font-weight: 500;
 	}
 }
+@keyframes fade {
+  from {opacity: 0.3} 
+  to {opacity: 1}
+}
 @media only screen and (min-width: 768px) {
-	#demo-images {
-		display: flex;
-	}
 	#download {
 		background-image: url(assets/background.png);
 		background-size: contain;
@@ -343,5 +377,11 @@ a {
 	#download a {
 		font-size: 2.5rem;
 		padding: 16px 24px;
+	}
+	#features {
+		flex-direction: row;
+	}
+	.slideshow-container {
+		max-width: 18vw;
 	}
 }
