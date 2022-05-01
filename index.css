@@ -13,9 +13,8 @@ html {
 	background: #201a1a;
 }
 
-a {
+.brand a {
 	text-decoration: none;
-	color: #cc322d;
 }
 
 .brand h1 {
@@ -37,8 +36,6 @@ a {
 
 #header .header {
 	min-height: 8vh;
-	background-color: rgba(31, 30, 30, 0.24);
-	transition: 0.3s ease background-color;
 }
 
 #header .nav-bar {
@@ -63,7 +60,6 @@ a {
 	justify-content: center;
 	align-items: center;
 	z-index: 1;
-	overflow-x: hidden;
 	transition: 0.5s ease left;
 }
 
@@ -117,7 +113,6 @@ a {
 	z-index: 100;
 	cursor: pointer;
 	transform: scale(0.8);
-	margin-right: 20px;
 }
 
 #header .hamburger:after {
@@ -174,22 +169,7 @@ a {
 	justify-content: center;
 }
 
-img {
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-}
-
-p {
-	color: black;
-	font-size: 1.4rem;
-	margin-top: 5px;
-	line-height: 2.5rem;
-	font-weight: 300;
-	letter-spacing: 0.05rem;
-}
-
-.cta {
+#download a {
 	display: inline-block;
 	padding: 10px;
 	margin: 16px;
@@ -199,11 +179,12 @@ p {
 	font-size: 1.6rem;
 	letter-spacing: 0.1rem;
 	text-transform: uppercase;
+	text-decoration: none;
 	transition: 0.3s ease;
 	transition-property: background-color, color;
 }
 
-.cta:hover {
+#download a:hover {
 	color: white;
 	background-color: #cc322d;
 }
@@ -297,6 +278,8 @@ p {
 .content p {
 	font-size: 2rem;
 	color: white;
+	line-height: 2.5rem;
+	letter-spacing: 0.05rem;
 }
 
 #features ul li {
@@ -314,6 +297,11 @@ p {
 	border-radius: 12px;
 	margin: 16px;
 	height: 45vh;
+}
+
+#faq a {
+	text-decoration: none;
+	color: #cc322d;
 }
 
 #btc {
@@ -340,16 +328,16 @@ p {
 	margin-bottom: 10px;
 }
 
-#footer .social-icon {
+#social-icons {
 	display: flex;
 	margin-bottom: 16px;
+	filter: invert(0.8)
 }
 
-#footer .social-item {
+#social-icons a img {
 	height: 32px;
 	width: 32px;
 	margin: 0 8px;
-	filter: invert(0.8)
 }
 
 #footer p {
@@ -395,10 +383,6 @@ p {
 }
 
 @media only screen and (min-width: 768px) {
-	.cta {
-		font-size: 2.5rem;
-		padding: 16px 24px;
-	}
 
 	#demo-images {
 		display: flex;
@@ -438,5 +422,10 @@ p {
 	#download h1,
 	.content h1 {
 		font-size: 6rem;
+	}
+	
+	#download a {
+		font-size: 2.5rem;
+		padding: 16px 24px;
 	}
 }
