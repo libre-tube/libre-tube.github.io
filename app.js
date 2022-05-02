@@ -30,22 +30,30 @@ menu_item.forEach((item) => {
 
 let slideIndex = 1;
 showSlides(slideIndex);
+setInterval(autoSlide, 200);
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlides(n);
 }
 
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}    
+  if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+    slides[i].style.display = "none";
   }
-  slides[slideIndex-1].style.display = "block";
+  slides[slideIndex - 1].style.display = "block";
+  lastSlide = new Date();
+}
+
+function autoSlide() {
+    if(new Date() - lastSlide >= 5000) {
+        plusSlides(1);
+    }
 }
