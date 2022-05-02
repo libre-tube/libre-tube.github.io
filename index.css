@@ -1,9 +1,11 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
+
 html {
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
@@ -11,17 +13,21 @@ html {
 	background: #201a1a;
 	color: #FFFFFF;
 }
+
 a {
 	color: #FFFFFF;
 	text-decoration: none;
 }
+
 .brand h1 {
 	font-size: 3rem;
 	text-transform: uppercase;
 }
+
 .brand h1 span {
 	color: #cc322d;
 }
+
 #header {
 	position: fixed;
 	z-index: 1000;
@@ -32,6 +38,7 @@ a {
 	align-items: center;
 	justify-content: center;
 }
+
 #header .nav-bar {
 	display: flex;
 	align-items: center;
@@ -41,6 +48,7 @@ a {
 	max-width: 1300px;
 	padding: 0 10px;
 }
+
 #header .nav-list {
 	position: initial;
 	display: block;
@@ -48,9 +56,11 @@ a {
 	width: fit-content;
 	background-color: transparent;
 }
+
 #header .nav-list li {
 	display: inline-block;
 }
+
 #header .nav-list a {
 	font-size: 1.8rem;
 	font-weight: 500;
@@ -59,12 +69,15 @@ a {
 	padding: 20px;
 	display: block;
 }
+
 #header .nav-list a:hover {
 	color: #cc322d;
 }
+
 #header #toggle-button {
 	display: none;
 }
+
 .container {
 	min-height: 100vh;
 	width: 100%;
@@ -72,6 +85,7 @@ a {
 	align-items: center;
 	justify-content: center;
 }
+
 #download a {
 	display: inline-block;
 	padding: 10px;
@@ -85,9 +99,11 @@ a {
 	transition: 0.3s ease;
 	transition-property: background-color, color;
 }
+
 #download a:hover {
 	background-color: #cc322d;
 }
+
 #download {
 	background-image: url(assets/background.png);
 	background-repeat: no-repeat;
@@ -97,12 +113,14 @@ a {
 	height: 100%;
 	width: 100%;
 }
+
 #download .download {
 	max-width: 1400px;
 	margin: 0 auto;
 	padding: 0 50px;
 	justify-content: flex-start;
 }
+
 #download h1 {
 	display: block;
 	width: fit-content;
@@ -112,16 +130,20 @@ a {
 	animation: text_reveal 0.5s ease forwards;
 	animation-delay: 1s;
 }
+
 #download h1:nth-child(1) {
 	animation-delay: 1s;
 }
+
 #download h1:nth-child(2) {
 	animation-delay: 2s;
 }
+
 #download h1:nth-child(3) {
 	animation: text_reveal_name 0.5s ease forwards;
 	animation-delay: 3s;
 }
+
 #download h1 span {
 	position: absolute;
 	top: 0;
@@ -132,169 +154,204 @@ a {
 	animation: text_reveal_box 1s ease;
 	animation-delay: 0.5s;
 }
+
 #download h1:nth-child(1) span {
 	animation-delay: 0.5s;
 }
+
 #download h1:nth-child(2) span {
 	animation-delay: 1.5s;
 }
+
 #download h1:nth-child(3) span {
 	animation-delay: 2.5s;
 }
+
 .content {
 	min-height: 100vh;
 	text-align: center;
 	display: flex;
 	justify-content: center;
 }
+
 .content h1 {
 	font-size: 4rem;
 	margin: 16px;
 }
+
 .content h2 {
 	margin-top: 16px;
 	font-size: 3rem;
 }
+
 .content p {
 	font-size: 2rem;
 	line-height: 2.5rem;
 }
+
 #features {
 	display: flex;
 }
+
 #features div {
 	margin: auto;
 }
+
 #features ul li {
 	font-size: 2.5rem;
 	margin: 4px 0;
 	list-style-position: inside;
 }
+
 .slideshow-container {
-  max-width: 18vw;
-  position: relative;
+	padding-top: 32px;
+	max-width: 18vw;
+	position: relative;
 }
-.slideshow-container .prev,
-.slideshow-container .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: #FFFFFF;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  user-select: none;
+
+.slideshow-container .prev, .slideshow-container .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -24px;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	user-select: none;
 }
+
 .slideshow-container .prev {
-  left: 0;
-  border-radius: 0 3px 3px 0;
+	left: 0;
+	border-radius: 0 3px 3px 0;
 }
+
 .slideshow-container .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+	right: 0;
+	border-radius: 3px 0 0 3px;
 }
-.slideshow-container.prev:hover,
-.slideshow-container .next:hover {
-  background-color: #000;
-  opacity: 0.8;
+
+.slideshow-container .prev:hover, .slideshow-container .next:hover {
+	background-color: #000;
+	opacity: 0.8;
 }
+
 .slideshow-container .mySlides {
-  display: none;
-  width: 100%;
-  border-radius: 30px;
-  animation-name: fade;
-  animation-duration: 5.5s;
+	display: none;
+	width: 100%;
+	border-radius: 30px;
+	animation-name: fade;
+	animation-duration: 5.5s;
 }
+
 #faq {
 	flex-direction: column;
 }
+
 #faq a {
 	color: #cc322d;
 }
+
 #btc {
 	word-wrap: break-word;
 }
+
 #footer {
 	background-image: linear-gradient(60deg, #2b2929 0%, #373737 100%);
 }
+
 #footer .footer {
 	min-height: 200px;
 	flex-direction: column;
 	padding-top: 32px;
 	padding-bottom: 10px;
 }
+
 #footer h2 {
 	font-weight: 500;
 	font-size: 1.8rem;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+
 #social-icons {
 	display: flex;
 	margin-bottom: 16px;
-	filter: invert(0.8)
+	filter: invert(0.8);
 }
+
 #social-icons a img {
 	height: 32px;
 	width: 32px;
 	margin: 0 8px;
 }
+
 #footer p {
 	font-size: 1.3rem;
 }
+
 @keyframes text_reveal_box {
 	50% {
 		width: 100%;
 		left: 0;
 	}
+
 	100% {
 		width: 0;
 		left: 100%;
 	}
 }
+
 @keyframes text_reveal {
 	100% {
 		color: #FFFFFF;
 	}
 }
+
 @keyframes text_reveal_name {
 	100% {
 		color: #cc322d;
 		font-weight: 500;
 	}
 }
+
 @keyframes fade {
-  0% {
-	opacity: 0.3;
-	filter: blur(1px);
-  }
-  30% {
-	opacity: 1;
-	filter: none;
-  }
-  80% {
-	opacity: 1;
-	filter: none;
-  }
-  100% {
-	opacity: 0.6;
-	filter: blur(1px)
-  }
+	0% {
+		opacity: 0.3;
+		filter: blur(1px);
+	}
+
+	30% {
+		opacity: 1;
+		filter: none;
+	}
+
+	80% {
+		opacity: 1;
+		filter: none;
+	}
+
+	100% {
+		opacity: 0.6;
+		filter: blur(1px);
+	}
 }
+
 @media only screen and (max-width: 800px) {
 	#header #toggle-button {
 		display: block;
 		margin-right: 16px;
 		cursor: pointer;
 		opacity: 0.5;
-		font-size: 5rem;
+		font-size: 4.5rem;
 	}
+
 	#header #toggle-button:hover {
 		opacity: 0.9;
 	}
+
 	#header .nav-list {
 		background: #201a1a;
 		position: absolute;
@@ -308,31 +365,39 @@ a {
 		align-items: center;
 		transition: 0.5s ease left;
 	}
+
 	#header .nav-list li {
 		text-align: center;
 	}
+
 	#header .nav-list li a {
 		font-size: 2.5rem;
 	}
+
 	#header .nav-list.active {
 		left: 0;
 		transition: 0.5s ease left;
 	}
+
 	#download {
 		background-image: url(assets/backgroundmobile.png);
 		background-size: cover;
 	}
+
 	#features {
-		flex-direction: column;
+		flex-direction: column-reverse;
 	}
+
 	.slideshow-container {
 		max-width: 90vw;
 	}
 }
+
 @media only screen and (min-width: 1200px) {
 	#download h1,.content h1 {
 		font-size: 6rem;
 	}
+
 	#download a {
 		font-size: 2.5rem;
 		padding: 16px 24px;
