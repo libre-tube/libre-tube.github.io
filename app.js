@@ -12,20 +12,24 @@ document.addEventListener('scroll', () => {
 
 /* Navbar Toggle */
 
-const toggleButton = document.querySelector('.toggle-button');
+const toggleButton = document.querySelector('#toggle-button');
 const navlist = document.getElementsByClassName('nav-list')[0];
 const navlinks = document.querySelectorAll('.nav-list li');
 
-
 toggleButton.addEventListener('click', () => {
-    navlist.classList.toggle("active");
+    switchToggle();
 });
 
 navlinks.forEach(navlink => {
     navlink.addEventListener('click', () => {
-        navlist.classList.toggle("active");
+        switchToggle();	
     });
 });
+
+function switchToggle() {
+    navlist.classList.toggle("active");
+    toggleButton.innerHTML = toggleButton.innerHTML === "×" ? "≡" : "×";
+}
 
 /* Slideshow */
 
