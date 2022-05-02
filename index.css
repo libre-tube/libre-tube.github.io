@@ -148,6 +148,7 @@ a {
 	margin: 16px;
 	margin-left: 0;
 	border: 2px solid #cc322d;
+	border-radius: 0.5em;
 	font-size: 1.6rem;
 	letter-spacing: 0.1rem;
 	text-transform: uppercase;
@@ -274,7 +275,7 @@ a {
   width: 100%;
   border-radius: 30px;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 5.5s;
 }
 #faq {
 	flex-direction: column;
@@ -345,8 +346,22 @@ a {
 	}
 }
 @keyframes fade {
-  from {opacity: 0.3} 
-  to {opacity: 1}
+  0% {
+	opacity: 0.3;
+	filter: blur(1px);
+  }
+  30% {
+	opacity: 1;
+	filter: none;
+  }
+  80% {
+	  opacity: 1;
+	filter: none;
+  }
+  100% {
+	opacity: 0.6;
+	filter: blur(1px)
+  }
 }
 @media only screen and (min-width: 768px) {
 	#download {
