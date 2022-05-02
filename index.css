@@ -27,9 +27,10 @@ a {
 	z-index: 1000;
 	width: 100vw;
 	height: auto;
-}
-#header .header {
 	min-height: 8vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 #header .nav-bar {
 	display: flex;
@@ -40,100 +41,42 @@ a {
 	max-width: 1300px;
 	padding: 0 10px;
 }
-#header .nav-list ul {
-	list-style: none;
-	position: absolute;
-	background-color: #201a1a;
-	width: 100vw;
-	height: 100vh;
-	left: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-	transition: 0.5s ease left;
+#header .nav-list {
+	position: initial;
+	display: block;
+	height: auto;
+	width: fit-content;
+	background-color: transparent;
 }
-#header .nav-list ul.active {
-	left: 0%;
+#header .nav-list li {
+	display: inline-block;
 }
-#header .nav-list ul a {
-	font-size: 2.5rem;
+#header .nav-list a {
+	font-size: 1.8rem;
 	font-weight: 500;
 	letter-spacing: 0.2rem;
 	text-transform: uppercase;
 	padding: 20px;
 	display: block;
 }
-#header .nav-list ul a::after {
-	content: attr(data-after);
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) scale(0);
-	font-size: 13rem;
-	letter-spacing: 50px;
-	z-index: -1;
-	transition: 0.3s ease letter-spacing;
-}
-#header .nav-list ul li:hover a::after {
-	transform: translate(-50%, -50%) scale(1);
-	letter-spacing: initial;
-}
-#header .nav-list ul li:hover a {
+#header .nav-list a:hover {
 	color: #cc322d;
 }
-#header .hamburger {
-	height: 60px;
-	width: 60px;
-	display: inline-block;
-	border: 3px solid white;
-	border-radius: 50%;
+#header .toggle-button {
 	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 100;
+	margin-right: 16px;
+	width: 25px;
+	height: 20px;
 	cursor: pointer;
-	transform: scale(0.8);
+	flex-direction: column;
+	justify-content: space-between;
+	display: none;
 }
-#header .hamburger:after {
-	position: absolute;
-	content: '';
-	height: 100%;
+#header .bar {
+	height: 3px;
 	width: 100%;
-	border: 3px solid white;
-	border-radius: 50%;
-	animation: hamburger_puls 1s ease infinite;
-}
-#header .hamburger .bar {
-	height: 2px;
-	width: 30px;
-	position: relative;
 	background-color: #FFFFFF;
-	z-index: -1;
-}
-#header .hamburger .bar::after,#header .hamburger .bar::before {
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	left: 0;
-	background-color: #FFFFFF;
-	transition: 0.3s ease;
-	transition-property: top, bottom;
-}
-#header .hamburger .bar::after {
-	top: 8px;
-}
-#header .hamburger .bar::before {
-	bottom: 8px;
-}
-#header .hamburger.active .bar::before {
-	bottom: 0;
-}
-#header .hamburger.active .bar::after {
-	top: 0;
+	border-radius: 100px;
 }
 .container {
 	min-height: 100vh;
@@ -159,9 +102,9 @@ a {
 	background-color: #cc322d;
 }
 #download {
-	background-image: url(assets/backgroundmobile.png);
+	background-image: url(assets/background.png);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	background-position: top center;
 	position: relative;
 	height: 100%;
@@ -231,7 +174,6 @@ a {
 }
 #features {
 	display: flex;
-	flex-direction: column;
 }
 #features div {
 	margin: auto;
@@ -242,35 +184,37 @@ a {
 	list-style-position: inside;
 }
 .slideshow-container {
-  max-width: 90vw;
+  max-width: 18vw;
   position: relative;
 }
-.prev, .next {
+.slideshow-container .prev,
+.slideshow-container .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: white;
+  color: #FFFFFF;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   user-select: none;
 }
-.prev {
+.slideshow-container .prev {
   left: 0;
   border-radius: 0 3px 3px 0;
 }
-.next {
+.slideshow-container .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-.prev:hover, .next:hover {
+.slideshow-container.prev:hover,
+.slideshow-container .next:hover {
   background-color: #000;
   opacity: 0.8;
 }
-.mySlides {
+.slideshow-container .mySlides {
   display: none;
   width: 100%;
   border-radius: 30px;
@@ -314,16 +258,6 @@ a {
 #footer p {
 	font-size: 1.3rem;
 }
-@keyframes hamburger_puls {
-	0% {
-		opacity: 1;
-		transform: scale(1);
-	}
-	100% {
-		opacity: 0;
-		transform: scale(1.4);
-	}
-}
 @keyframes text_reveal_box {
 	50% {
 		width: 100%;
@@ -355,7 +289,7 @@ a {
 	filter: none;
   }
   80% {
-	  opacity: 1;
+	opacity: 1;
 	filter: none;
   }
   100% {
@@ -363,40 +297,50 @@ a {
 	filter: blur(1px)
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 800px) {
+	#header .toggle-button {
+		display: flex;
+	}
+	#header .nav-list {
+		background: #201a1a;
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		transition: 0.5s ease left;
+	}
+	#header .nav-list li {
+		text-align: center;
+	}
+	#header .nav-list li a {
+		font-size: 2.5rem;
+	}
+	#header .nav-list.active {
+		left: 0;
+		transition: 0.5s ease left;
+	}
 	#download {
-		background-image: url(assets/background.png);
-		background-size: contain;
+		background-image: url(assets/backgroundmobile.png);
+		background-size: cover;
+	}
+	#features {
+		flex-direction: column;
+	}
+	.slideshow-container {
+		max-width: 90vw;
 	}
 }
 @media only screen and (min-width: 1200px) {
-	#header .hamburger,#header .nav-list ul a:after {
-		display: none;
-	}
-	#header .nav-list ul {
-		position: initial;
-		display: block;
-		height: auto;
-		width: fit-content;
-		background-color: transparent;
-	}
-	#header .nav-list ul li {
-		display: inline-block;
-	}
-	#header .nav-list ul li a {
-		font-size: 1.8rem;
-	}
 	#download h1,.content h1 {
 		font-size: 6rem;
 	}
 	#download a {
 		font-size: 2.5rem;
 		padding: 16px 24px;
-	}
-	#features {
-		flex-direction: row;
-	}
-	.slideshow-container {
-		max-width: 18vw;
 	}
 }
