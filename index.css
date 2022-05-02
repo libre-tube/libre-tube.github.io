@@ -62,21 +62,8 @@ a {
 #header .nav-list a:hover {
 	color: #cc322d;
 }
-#header .toggle-button {
-	position: relative;
-	margin-right: 16px;
-	width: 25px;
-	height: 20px;
-	cursor: pointer;
-	flex-direction: column;
-	justify-content: space-between;
+#header #toggle-button {
 	display: none;
-}
-#header .bar {
-	height: 3px;
-	width: 100%;
-	background-color: #FFFFFF;
-	border-radius: 100px;
 }
 .container {
 	min-height: 100vh;
@@ -298,8 +285,15 @@ a {
   }
 }
 @media only screen and (max-width: 800px) {
-	#header .toggle-button {
-		display: flex;
+	#header #toggle-button {
+		display: block;
+		margin-right: 16px;
+		cursor: pointer;
+		opacity: 0.5;
+		font-size: 5rem;
+	}
+	#header #toggle-button:hover {
+		opacity: 0.9;
 	}
 	#header .nav-list {
 		background: #201a1a;
