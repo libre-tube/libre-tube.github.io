@@ -346,10 +346,12 @@ a {
 		cursor: pointer;
 		opacity: 0.5;
 		font-size: 4rem;
+		line-height: 0.7rem;
 	}
 	
 	#header #toggle-button.active {
 		font-size: 5rem;
+		line-height: normal;
 	}
 	
 	#header #toggle-button:hover {
