@@ -343,13 +343,13 @@ a {
 	#header #toggle-button {
 		display: block;
 		margin: -1rem 1rem;
-		line-height: 0.7rem;
+		line-height: 0.9rem;
 		cursor: pointer;
 		opacity: 0.5;
-		font-size: 4.5rem;
+		font-size: 4rem;
 	}
 	
-	#header #toggle-button.cross {
+	#header #toggle-button.active {
 		line-height: normal;
 		font-size: 5rem;
 	}
