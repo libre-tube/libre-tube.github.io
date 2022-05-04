@@ -30,3 +30,7 @@ function switchToggle() {
     navlist.classList.toggle("active");
     toggleButton.innerHTML = toggleButton.innerHTML === "×" ? "≡" : "×";
 }
+
+/* Fade-In Image Amimations */
+
+AOS.init();
