@@ -28,7 +28,6 @@ navlinks.forEach(navlink => {
 
 function switchToggle() {
     navlist.classList.toggle("active");
-    toggleButton.classList.toggle("active");
     toggleButton.innerHTML = toggleButton.innerHTML === "×" ? "≡" : "×";
 }
 

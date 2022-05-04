@@ -342,16 +342,10 @@ a {
 @media only screen and (max-width: 800px) {
 	#header #toggle-button {
 		display: inline-block;
-		margin: auto 1rem;
-		cursor: pointer;
-		opacity: 0.5;
 		font-size: 4rem;
-		line-height: 0.7rem;
-	}
-	
-	#header #toggle-button.active {
-		font-size: 5rem;
-		margin: 2rem 1rem;
+		cursor: pointer;
+		margin: auto 1rem;
+		opacity: 0.5;
 	}
 	
 	#header #toggle-button:hover {
