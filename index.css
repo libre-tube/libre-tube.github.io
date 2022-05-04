@@ -341,17 +341,11 @@ a {
 
 @media only screen and (max-width: 800px) {
 	#header #toggle-button {
-		display: block;
-		margin: -1rem 1rem;
-		line-height: 0.7rem;
+		display: inline-block;
+		font-size: 4rem;
 		cursor: pointer;
+		margin: auto 1rem;
 		opacity: 0.5;
-		font-size: 4.5rem;
-	}
-	
-	#header #toggle-button.cross {
-		line-height: normal;
-		font-size: 5rem;
 	}
 	
 	#header #toggle-button:hover {
