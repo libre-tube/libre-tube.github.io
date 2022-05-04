@@ -174,7 +174,6 @@ a {
 
 #features img {
 	height: 80vh;
-	border-radius: 2rem;
 	margin: 0 5vw;
 }
 
@@ -188,8 +187,8 @@ a {
 
 #features h2 {
 	font-family: "Poppins", sans-serif;
-	background: #8B2F14;
-	color: #191c1e;
+	background: #993030;
+	color: #201a1a;
 	text-transform: uppercase;
 	text-align: center;
 	border-radius: 30px;
