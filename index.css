@@ -341,6 +341,20 @@ a {
 		background-image: url(assets/backgroundmobile.png);
 		background-size: cover;
 	}
+	
+	#features img {
+		width: 40vw;
+		height: auto;
+	}
+	
+	#features h2 {
+		font-size: 1rem;
+	}
+	
+	#features p {
+		font-size: 1rem;
+		line-height: normal;
+	}
 }
 
 @media only screen and (min-width: 1200px) {
