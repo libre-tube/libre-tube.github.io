@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="assets/icon.png">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="index.css">
         <title>LibreTube</title>
     </head>
@@ -37,32 +38,37 @@
                 </div>
             </div>
         </section>
-        <section class="content" id="features">
-            <div class="slideshow-container">
-                <img class="mySlides" src="demo/shot_1.png">
-                <img class="mySlides" src="demo/shot_2.png">
-                <img class="mySlides" src="demo/shot_3.png">
-                <img class="mySlides" src="demo/shot_4.png">
-                <img class="mySlides" src="demo/shot_5.png">
-                <img class="mySlides" src="demo/shot_6.png">
-                <img class="mySlides" src="demo/shot_7.png">
-                <img class="mySlides" src="demo/shot_8.png">
-                <img class="mySlides" src="demo/shot_9.png">
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
+        <section id="features">
+            <div class="container">
+                <img src="demo/trends.png" data-aos="fade-right">
+                <div data-aos="fade-left">
+                    <h2>Trending Page</h2>
+                    <p>Watch the latest YouTube Trends for your region.</p>
+                </div>
             </div>
-            <div>
-                <h1>Features</h1>
-                <ul>
-                    <li>User Accounts, Playlists and Subscriptions</li>
-                    <li>Trending and Channels Page</li>
-                    <li>Material You Theming</li>
-                    <li>Search including Suggestions</li>
-                    <li>Video Player with Subtitles</li>
-                </ul>
+            <div class="container second">
+                <img src="demo/subs.png" data-aos="fade-left">
+                <div data-aos="fade-right">
+                    <h2>User Subsciptions and Playlists</h2>
+                    <p>Subscribe to channels to never miss out their latest videos and create your own playlists.</p>
+                </div>
+            </div>
+            <div class="container">
+                <img src="demo/search.png" data-aos="fade-right">
+                <div data-aos="fade-left">
+                    <h2>Search with Auto-Suggestions</h2>
+                    <p>Browse YouTube for your favorite content creators and their latest videos.</p>
+                </div>
+            </div>
+            <div class="container second">
+                <img src="demo/player.png" data-aos="fade-left">
+                <div data-aos="fade-right">
+                    <h2>Video Player</h2>
+                    <p>Watch videos with advanced features like subtitles, playback speed and different video resolutions.</p>
+                </div>
             </div>
         </section>
-        <section class="content" id="faq">
+        <section id="faq">
             <div>
                 <h1>Frequently Asked Questions</h1>
                 <h2>Current State</h2>
@@ -100,4 +106,5 @@
         </section>
     </body>
 </html>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="app.js"></script>

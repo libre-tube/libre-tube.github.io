@@ -70,7 +70,8 @@ a {
 	display: block;
 }
 
-#header .nav-list a:hover {
+#header .nav-list a:hover,
+#header .current {
 	color: #cc322d;
 }
 
@@ -167,86 +168,57 @@ a {
 	animation-delay: 2.5s;
 }
 
-.content {
+#features {
+	justify-content: space-between;
+}
+
+#features img {
+	height: 80vh;
+	margin: 0 5vw;
+}
+
+#features .second {
+	flex-direction: row-reverse;
+}
+
+#features div div {
+	margin: 0 5vw;
+}
+
+	user-select: none;
+	line-height: 1.5;
+	padding: 6px 30px;
+	margin-bottom: 12px;
+	display: inline-block;
+}
+
+#features p {
+	max-width: 30vw;
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+
+#faq {
+	flex-direction: column;
 	min-height: 100vh;
 	text-align: center;
 	display: flex;
 	justify-content: center;
 }
 
-.content h1 {
+#faq h1 {
 	font-size: 4rem;
 	margin: 16px;
 }
 
-.content h2 {
+#faq h2 {
 	margin-top: 16px;
 	font-size: 3rem;
 }
 
-.content p {
+#faq p {
 	font-size: 2rem;
 	line-height: 2.5rem;
-}
-
-#features {
-	display: flex;
-}
-
-#features div {
-	margin: auto;
-}
-
-#features ul li {
-	font-size: 2.5rem;
-	margin: 4px 0;
-	list-style-position: inside;
-}
-
-.slideshow-container {
-	padding-top: 32px;
-	max-width: 18vw;
-	position: relative;
-}
-
-.slideshow-container .prev, .slideshow-container .next {
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	width: auto;
-	padding: 16px;
-	color: #FFFFFF;
-	font-weight: bold;
-	font-size: 18px;
-	transition: 0.6s ease;
-	user-select: none;
-}
-
-.slideshow-container .prev {
-	left: 0;
-	border-radius: 0 3px 3px 0;
-}
-
-.slideshow-container .next {
-	right: 0;
-	border-radius: 3px 0 0 3px;
-}
-
-.slideshow-container .prev:hover, .slideshow-container .next:hover {
-	background-color: #000;
-	opacity: 0.8;
-}
-
-.slideshow-container .mySlides {
-	display: none;
-	width: 100%;
-	border-radius: 30px;
-	animation-name: fade;
-	animation-duration: 5.5s;
-}
-
-#faq {
-	flex-direction: column;
 }
 
 #faq a {
@@ -316,28 +288,6 @@ a {
 	}
 }
 
-@keyframes fade {
-	0% {
-		opacity: 0.3;
-		filter: blur(1px);
-	}
-
-	30% {
-		opacity: 1;
-		filter: none;
-	}
-
-	80% {
-		opacity: 1;
-		filter: none;
-	}
-
-	100% {
-		opacity: 0.6;
-		filter: blur(1px);
-	}
-}
-
 @media only screen and (max-width: 800px) {
 	#header #toggle-button {
 		display: inline-block;
@@ -382,13 +332,19 @@ a {
 		background-image: url(assets/backgroundmobile.png);
 		background-size: cover;
 	}
-
-	#features {
-		flex-direction: column-reverse;
+	
+	#features img {
+		width: 40vw;
+		height: auto;
 	}
-
-	.slideshow-container {
-		max-width: 90vw;
+	
+	#features h2 {
+		font-size: 1rem;
+	}
+	
+	#features p {
+		font-size: 1rem;
+		line-height: normal;
 	}
 }
 

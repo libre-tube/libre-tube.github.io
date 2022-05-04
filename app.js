@@ -8,7 +8,19 @@ document.addEventListener('scroll', () => {
     } else {
         header.style.backgroundColor = 'transparent';
     }
+    highlinghtNavlink();
 });
+
+/* Navbar Current Page */
+
+function highlinghtNavlink(){
+    for (var i = 0; i < document.links.length; i++) {
+	document.links[i].classList.remove('current');
+	if (document.links[i].href === document.URL) {
+	    document.links[i].className = 'current';
+	}
+    }
+}
 
 /* Navbar Toggle */
 
@@ -31,38 +43,6 @@ function switchToggle() {
     toggleButton.innerHTML = toggleButton.innerHTML === "×" ? "≡" : "×";
 }
 
-/* Slideshow */
+/* Fade-In Image Amimations */
 
-let slideIndex = 1;
-showSlides(slideIndex);
-setInterval(autoSlide, 200);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-    showSlides(n);
-}
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) {
-        slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
-    lastSlide = new Date();
-}
-
-function autoSlide() {
-    if (new Date() - lastSlide >= 5000) {
-        plusSlides(1);
-    }
-}
+AOS.init();
