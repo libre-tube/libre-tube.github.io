@@ -8,7 +8,19 @@ document.addEventListener('scroll', () => {
     } else {
         header.style.backgroundColor = 'transparent';
     }
+    highlinghtNavlink();
 });
+
+/* Navbar Current Page */
+
+function highlinghtNavlink(){
+    for (var i = 0; i < document.links.length; i++) {
+	document.links[i].classList.remove('current');
+	if (document.links[i].href === document.URL) {
+	    document.links[i].className = 'current';
+	}
+    }
+}
 
 /* Navbar Toggle */
 

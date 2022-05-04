@@ -70,7 +70,8 @@ a {
 	display: block;
 }
 
-#header .nav-list a:hover {
+#header .nav-list a:hover,
+#header .current {
 	color: #cc322d;
 }
 
