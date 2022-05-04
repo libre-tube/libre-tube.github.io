@@ -342,6 +342,10 @@ a {
 		background-size: cover;
 	}
 	
+	#features .container {
+		min-height: 70vh;
+	}
+	
 	#features img {
 		width: 40vw;
 		height: auto;
