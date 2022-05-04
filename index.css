@@ -1,373 +1,378 @@
+
+
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
 
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 html {
-	font-size: 10px;
-	font-family: 'Montserrat', sans-serif;
-	scroll-behavior: smooth;
-	background: #201a1a;
-	color: #FFFFFF;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    background: #201a1a;
+    color: #FFFFFF;
 }
 
 a {
-	color: #FFFFFF;
-	text-decoration: none;
+    color: #FFFFFF;
+    text-decoration: none;
 }
 
 .brand h1 {
-	font-size: 3rem;
-	text-transform: uppercase;
+    font-size: 3rem;
+    text-transform: uppercase;
 }
 
 .brand h1 span {
-	color: #cc322d;
+    color: #cc322d;
 }
 
 #header {
-	position: fixed;
-	z-index: 1000;
-	width: 100vw;
-	height: auto;
-	min-height: 8vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    height: auto;
+    min-height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #header .nav-bar {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
-	height: 100%;
-	max-width: 1300px;
-	padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
 }
 
 #header .nav-list {
-	position: initial;
-	display: block;
-	height: auto;
-	width: fit-content;
-	background-color: transparent;
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color: transparent;
 }
 
 #header .nav-list li {
-	display: inline-block;
+    display: inline-block;
 }
 
 #header .nav-list a {
-	font-size: 1.8rem;
-	font-weight: 500;
-	letter-spacing: 0.2rem;
-	text-transform: uppercase;
-	padding: 20px;
-	display: block;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
 }
 
 #header .nav-list a:hover,
 #header .current {
-	color: #cc322d;
+    color: #cc322d;
 }
 
 #header #toggle-button {
-	display: none;
-}
-
-.container {
-	min-height: 100vh;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-#download a {
-	display: inline-block;
-	padding: 10px;
-	margin: 16px;
-	margin-left: 0;
-	border: 2px solid #cc322d;
-	border-radius: 0.5em;
-	font-size: 1.6rem;
-	letter-spacing: 0.1rem;
-	text-transform: uppercase;
-	transition: 0.3s ease;
-	transition-property: background-color, color;
-}
-
-#download a:hover {
-	background-color: #cc322d;
+    display: none;
 }
 
 #download {
-	background-image: url(assets/background.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: top center;
-	position: relative;
-	height: 100%;
-	width: 100%;
+    background-image: url(assets/background.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
 }
 
-#download .download {
-	max-width: 1400px;
-	margin: 0 auto;
-	padding: 0 50px;
-	justify-content: flex-start;
+#download div {
+    margin: auto 0;
+    padding: 0 50px;
+}
+
+#download a {
+    display: inline-block;
+    padding: 10px;
+    margin: 16px;
+    margin-left: 0;
+    border: 2px solid #cc322d;
+    border-radius: 0.5em;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+#download a:hover {
+    background-color: #cc322d;
 }
 
 #download h1 {
-	display: block;
-	width: fit-content;
-	font-size: 4rem;
-	position: relative;
-	color: transparent;
-	animation: text_reveal 0.5s ease forwards;
-	animation-delay: 1s;
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 0.5s ease forwards;
+    animation-delay: 1s;
 }
 
 #download h1:nth-child(1) {
-	animation-delay: 1s;
+    animation-delay: 1s;
 }
 
 #download h1:nth-child(2) {
-	animation-delay: 2s;
+    animation-delay: 2s;
 }
 
 #download h1:nth-child(3) {
-	animation: text_reveal_name 0.5s ease forwards;
-	animation-delay: 3s;
+    animation: text_reveal_name 0.5s ease forwards;
+    animation-delay: 3s;
 }
 
 #download h1 span {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 0;
-	background-color: #cc322d;
-	animation: text_reveal_box 1s ease;
-	animation-delay: 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #cc322d;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 0.5s;
 }
 
 #download h1:nth-child(1) span {
-	animation-delay: 0.5s;
+    animation-delay: 0.5s;
 }
 
 #download h1:nth-child(2) span {
-	animation-delay: 1.5s;
+    animation-delay: 1.5s;
 }
 
 #download h1:nth-child(3) span {
-	animation-delay: 2.5s;
-}
-
-#features {
-	justify-content: space-between;
+    animation-delay: 2.5s;
 }
 
 #features img {
-	height: 80vh;
-	margin: 0 5vw;
+    height: 80vh;
+    margin: 0 5vw;
+}
+
+#features .container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #features .second {
-	flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 #features div div {
-	margin: 0 5vw;
+    margin: 0 5vw;
 }
 
 #features h2 {
-	font-family: "Poppins", sans-serif;
-	background: #993030;
-	color: #201a1a;
-	text-transform: uppercase;
-	border-radius: 2rem;
-	font-weight: 700;
-	font-size: 14px;
-	user-select: none;
-	cursor: pointer;
-	line-height: 1.5;
-	padding: 6px 30px;
-	margin-bottom: 12px;
-	display: inline-block;
+    font-family: "Poppins", sans-serif;
+    background: #993030;
+    color: #201a1a;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    font-weight: 700;
+    font-size: 14px;
+    user-select: none;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: 6px 30px;
+    margin-bottom: 12px;
+    display: inline-block;
 }
 
 #features p {
-	max-width: 30vw;
-	font-size: 2rem;
-	line-height: 2.5rem;
+    max-width: 30vw;
+    font-size: 2rem;
+    line-height: 2.5rem;
 }
 
 #faq {
-	flex-direction: column;
-	min-height: 100vh;
-	text-align: center;
-	display: flex;
-	justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 3vw;
 }
 
 #faq h1 {
-	font-size: 4rem;
-	margin: 16px;
+    font-size: 4rem;
+    margin: 16px;
 }
 
 #faq h2 {
-	margin-top: 16px;
-	font-size: 3rem;
+    margin-top: 16px;
+    font-size: 3rem;
 }
 
 #faq p {
-	font-size: 2rem;
-	line-height: 2.5rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
 }
 
 #faq a {
-	color: #cc322d;
+    color: #cc322d;
 }
 
 #btc {
-	word-wrap: break-word;
+    word-wrap: break-word;
 }
 
 #footer {
-	background-image: linear-gradient(60deg, #2b2929 0%, #373737 100%);
-}
-
-#footer .footer {
-	min-height: 200px;
-	flex-direction: column;
-	padding-top: 32px;
-	padding-bottom: 10px;
+    background-image: linear-gradient(60deg, #2b2929 0%, #373737 100%);
+    flex-direction: column;
+    padding-top: 32px;
+    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #footer h2 {
-	font-weight: 500;
-	font-size: 1.8rem;
-	margin-top: 10px;
-	margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #social-icons {
-	display: flex;
-	margin-bottom: 16px;
-	filter: invert(0.8);
+    display: flex;
+    margin-bottom: 16px;
+    filter: invert(0.8);
 }
 
 #social-icons a img {
-	height: 32px;
-	width: 32px;
-	margin: 0 8px;
+    height: 32px;
+    width: 32px;
+    margin: 0 8px;
 }
 
 #footer p {
-	font-size: 1.3rem;
+    font-size: 1.3rem;
 }
 
 @keyframes text_reveal_box {
-	50% {
-		width: 100%;
-		left: 0;
-	}
+    50% {
+        width: 100%;
+        left: 0;
+    }
 
-	100% {
-		width: 0;
-		left: 100%;
-	}
+    100% {
+        width: 0;
+        left: 100%;
+    }
 }
 
 @keyframes text_reveal {
-	100% {
-		color: #FFFFFF;
-	}
+    100% {
+        color: #FFFFFF;
+    }
 }
 
 @keyframes text_reveal_name {
-	100% {
-		color: #cc322d;
-		font-weight: 500;
-	}
+    100% {
+        color: #cc322d;
+        font-weight: 500;
+    }
 }
 
-@media only screen and (max-width: 800px) {
-	#header #toggle-button {
-		display: inline-block;
-		font-size: 4rem;
-		cursor: pointer;
-		margin: auto 1rem;
-		opacity: 0.5;
-	}
-	
-	#header #toggle-button:hover {
-		opacity: 0.9;
-	}
+@media only screen and (max-width: 700px) {
+    #header #toggle-button {
+        display: inline-block;
+        font-size: 4rem;
+        cursor: pointer;
+        margin: auto 1rem;
+        opacity: 0.5;
+    }
 
-	#header .nav-list {
-		background: #201a1a;
-		position: absolute;
-		width: 100vw;
-		height: 100vh;
-		top: 0;
-		left: 100%;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		transition: 0.5s ease left;
-	}
+    #header #toggle-button:hover {
+        opacity: 0.9;
+    }
 
-	#header .nav-list li {
-		text-align: center;
-	}
+    #header .nav-list {
+        background: #201a1a;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s ease left;
+    }
 
-	#header .nav-list li a {
-		font-size: 2.5rem;
-	}
+    #header .nav-list li {
+        text-align: center;
+    }
 
-	#header .nav-list.active {
-		left: 0;
-		transition: 0.5s ease left;
-	}
+    #header .nav-list li a {
+        font-size: 2.5rem;
+    }
 
-	#download {
-		background-image: url(assets/backgroundmobile.png);
-		background-size: cover;
-	}
-	
-	#features .container {
-		min-height: 70vh;
-	}
-	
-	#features img {
-		width: 40vw;
-		height: auto;
-	}
-	
-	#features h2 {
-		font-size: 1rem;
-	}
-	
-	#features p {
-		font-size: 1rem;
-		line-height: normal;
-	}
+    #header .nav-list.active {
+        left: 0;
+        transition: 0.5s ease left;
+    }
+
+    #download {
+        background-image: url(assets/backgroundmobile.png);
+        background-size: cover;
+    }
+
+    #features .container {
+        min-height: 70vh;
+    }
+
+    #features img {
+        width: 40vw;
+        height: auto;
+    }
+
+    #features h2 {
+        font-size: 1rem;
+    }
+
+    #features p {
+        font-size: 1rem;
+        line-height: normal;
+    }
+
+    #download h1 {
+        font-size: 3.5rem;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
-	#download h1,.content h1 {
-		font-size: 6rem;
-	}
+    #download div {
+        position: relative;
+        left: 13%;
+    }
 
-	#download a {
-		font-size: 2.5rem;
-		padding: 16px 24px;
-	}
+    #download h1,
+    .content h1 {
+        font-size: 6rem;
+    }
+
+    #download a {
+        font-size: 2.5rem;
+        padding: 16px 24px;
+    }
 }
