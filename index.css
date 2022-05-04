@@ -12,6 +12,7 @@ html {
     scroll-behavior: smooth;
     background: #201a1a;
     color: #FFFFFF;
+    overflow-x: hidden;
 }
 
 a {
@@ -31,7 +32,7 @@ a {
 #header {
     position: fixed;
     z-index: 1000;
-    width: 100vw;
+    width: 100%;
     height: auto;
     min-height: 8vh;
     display: flex;
@@ -265,6 +266,27 @@ a {
     font-size: 1.3rem;
 }
 
+#topBtn {
+	display: none;
+	background-color: #000;
+	color: #cc322d;
+	position: fixed;
+	bottom: 2rem;
+	right: 3rem;
+	z-index: 99;
+	cursor: pointer;
+	padding: 1.5rem;
+	border-radius: 1rem;
+	font-size: 2rem;
+	font-weight: bolder;
+	transform: scale(1.2, 1);
+}
+
+#topBtn:hover {
+	background-color: #cc322d;
+	color: #ffffff;
+}
+
 @keyframes text_reveal_box {
     50% {
         width: 100%;
@@ -293,6 +315,7 @@ a {
 @media only screen and (max-width: 768px) {
     #header #toggle-button {
         display: inline-block;
+        user-select: none;
         font-size: 4rem;
         cursor: pointer;
         margin: auto 1rem;
