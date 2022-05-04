@@ -185,7 +185,16 @@ a {
 	margin: 0 5vw;
 }
 
+#features h2 {
+	font-family: "Poppins", sans-serif;
+	background: #993030;
+	color: #201a1a;
+	text-transform: uppercase;
+	border-radius: 2rem;
+	font-weight: 700;
+	font-size: 14px;
 	user-select: none;
+	cursor: pointer;
 	line-height: 1.5;
 	padding: 6px 30px;
 	margin-bottom: 12px;
