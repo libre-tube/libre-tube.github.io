@@ -15,7 +15,7 @@ html {
 }
 
 .light {
-	background: white;
+	background: #E5F3F7;
 	color: black !important;
 }
 
@@ -23,8 +23,21 @@ html {
 	color: black !important;
 }
 
+.light #features h2 {
+	background: #1a73e8 !important;
+	color: #E5F3F7 !important;
+}
+
 .light a {
-	color: #cc322d !important;
+	color: #1a73e8 !important;
+}
+
+.light #download a {
+	border: 2px solid #1a73e8 !important;
+}
+
+.light #download a:hover {
+	background: #1a73e8 !important;
 }
 
 a {
