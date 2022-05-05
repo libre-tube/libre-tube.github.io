@@ -40,6 +40,10 @@ html {
 	color: #1a73e8 !important;
 }
 
+.light #download {
+    background: #E5F3F7;
+}
+
 .light #download a {
 	border: 2px solid #1a73e8;
 	background: #1a73e8;
@@ -49,6 +53,14 @@ html {
 .light #download a:hover {
 	background: transparent;
 	color: #1a73e8 !important;
+}
+
+.light #topBtn {
+    color: #1a73e8;
+}
+
+.light #topBtn:hover {
+    background: #1a73e8;
 }
 
 a {
