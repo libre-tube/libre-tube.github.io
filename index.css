@@ -14,9 +14,18 @@ html {
     color: #FFFFFF;
 }
 
+html .light {
+	background: white;
+	color: black !important;
+}
+
 a {
     color: #FFFFFF;
     text-decoration: none;
+}
+
+.brand {
+	display: flex;
 }
 
 .brand h1 {
@@ -286,6 +295,13 @@ a {
 #topBtn:hover {
 	background-color: #cc322d;
 	color: #ffffff;
+}
+
+#toggleTheme {
+	font-size: 24px;
+	margin: 2px 8px;
+	cursor: pointer;
+	user-select: none;
 }
 
 @keyframes text_reveal_box {
