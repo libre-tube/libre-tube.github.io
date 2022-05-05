@@ -12,7 +12,6 @@ html {
     scroll-behavior: smooth;
     background: #201a1a;
     color: #FFFFFF;
-    overflow-x: hidden;
 }
 
 a {
@@ -165,6 +164,7 @@ a {
 #features .container {
     min-height: 100vh;
     width: 100%;
+    overflow-x: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -250,13 +250,13 @@ a {
     margin-bottom: 10px;
 }
 
-#social-icons {
+#footer #social-icons {
     display: flex;
     margin-bottom: 16px;
     filter: invert(0.8);
 }
 
-#social-icons a img {
+#footer #social-icons a img {
     height: 32px;
     width: 32px;
     margin: 0 8px;
@@ -268,6 +268,7 @@ a {
 
 #topBtn {
 	display: none;
+	user-select: none;
 	background-color: #000;
 	color: #cc322d;
 	position: fixed;
@@ -275,11 +276,11 @@ a {
 	right: 3rem;
 	z-index: 99;
 	cursor: pointer;
-	padding: 1.5rem;
+	padding: 1.8rem 0.9rem;
 	border-radius: 1rem;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	font-weight: bolder;
-	transform: scale(1.2, 1);
+	transform: scale(1.7, 1);
 }
 
 #topBtn:hover {
