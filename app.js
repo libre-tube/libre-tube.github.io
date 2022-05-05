@@ -1,4 +1,13 @@
+/* Theme Toggle */
+
+const themeToggleBtn = document.getElementById('toggleTheme');
+
+themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light');
+});
+
 /* Header Background & ScrollToTOp Button*/
+
 window.onscroll = function() {
     scrollFunction()
 };
@@ -12,11 +21,6 @@ function scrollFunction() {
         topBtn.style.display = "block";
     } else {
         topBtn.style.display = "none";
-    }
-    if (scrollPos > 150) {
-        header.style.backgroundColor = '#29323c';
-    } else {
-        header.style.backgroundColor = 'transparent';
     }
 }
 
@@ -49,11 +53,3 @@ function switchToggle() {
 /* Fade-In Image Amimations */
 
 AOS.init();
-
-/* Theme Toggle */
-
-const themeToggleBtn = document.getElementById('toggleTheme');
-
-themeToggleBtn.addEventListener('click', () => {
-    document.querySelector('main').classList.toggle('light');
-});
