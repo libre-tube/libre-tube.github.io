@@ -1,10 +1,9 @@
 /* Theme Toggle */
 
-const main = document.querySelector('main');
 const themeToggleBtn = document.getElementById('toggleTheme');
 
 themeToggleBtn.addEventListener('click', () => {
-    main.classList.toggle('light');
+    document.body.classList.toggle('light');
 });
 
 /* Header Background & ScrollToTOp Button*/
@@ -22,11 +21,6 @@ function scrollFunction() {
         topBtn.style.display = "block";
     } else {
         topBtn.style.display = "none";
-    }
-    if (scrollPos > 150 || main.classList.contains('light')) {
-        header.style.backgroundColor = '#29323c';
-    } else {
-        header.style.backgroundColor = 'transparent';
     }
 }
 

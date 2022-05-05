@@ -11,15 +11,19 @@ html {
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
     background: #201a1a;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
-.light {
+.light #header .nav-list a:hover {
+	color: #1a73e8;
+}
+
+.light main {
 	background: #E5F3F7;
 	color: black !important;
 }
 
-.light h1 {
+.light main h1 {
 	color: black !important;
 }
 
@@ -28,21 +32,30 @@ html {
 	color: #E5F3F7 !important;
 }
 
-.light a {
+.light main a {
+	color: #1a73e8 !important;
+}
+
+.light span {
 	color: #1a73e8 !important;
 }
 
 .light #download a {
-	border: 2px solid #1a73e8 !important;
+	border: 2px solid #1a73e8;
+	background: #1a73e8;
+	color: white !important;
 }
 
 .light #download a:hover {
-	background: #1a73e8 !important;
+	background: transparent;
+	color: #1a73e8 !important;
 }
 
 a {
-    color: #FFFFFF;
+    color: white;
     text-decoration: none;
+    user-select: none;
+    cursor: pointer;
 }
 
 .brand {
@@ -67,6 +80,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #201a1a;
 }
 
 #header .nav-bar {
@@ -116,77 +130,49 @@ a {
     min-height: 100vh;
     width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #download div {
-    margin: auto 0;
-    padding: 0 50px;
+	margin: 20vh 5vw;
+	margin-bottom: 10vh 5vw;
 }
 
-#download a {
-    display: inline-block;
-    padding: 10px;
-    margin: 16px;
-    margin-left: 0;
-    border: 2px solid #cc322d;
-    border-radius: 0.5em;
-    font-size: 1.6rem;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-    transition: 0.3s ease;
-}
-
-#download a:hover {
-    background-color: #cc322d;
+#download img {
+    height: 55vh;
+    margin: 0 5vw;
 }
 
 #download h1 {
-    display: block;
-    width: fit-content;
-    font-size: 4rem;
-    position: relative;
-    color: transparent;
-    animation: text_reveal 0.5s ease forwards;
-    animation-delay: 1s;
-}
-
-#download h1:nth-child(1) {
-    animation-delay: 1s;
-}
-
-#download h1:nth-child(2) {
-    animation-delay: 2s;
-}
-
-#download h1:nth-child(3) {
-    animation: text_reveal_name 0.5s ease forwards;
-    animation-delay: 3s;
+    font: 700 3rem/2.75rem "Montserrat", sans-serif;
 }
 
 #download h1 span {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    background-color: #cc322d;
-    animation: text_reveal_box 1s ease;
-    animation-delay: 0.5s;
+    color: #cc322d;
 }
 
-#download h1:nth-child(1) span {
-    animation-delay: 0.5s;
+#download p {
+	font-size: 1.5rem;
 }
 
-#download h1:nth-child(2) span {
-    animation-delay: 1.5s;
+#download a {
+	background-color: #cc322d;
+    display: inline-block;
+    padding: 2rem 3.5rem;
+    margin-top: 1.5rem;
+    margin-right: 0.5rem;
+    border: 2px solid #cc322d;
+    border-radius: 2rem;
+    font: 700 1.5rem/0 "Montserrat", sans-serif;
 }
 
-#download h1:nth-child(3) span {
-    animation-delay: 2.5s;
+#download a:hover {
+    background-color: transparent;
+    color: #cc322d;
 }
 
-#features img {
+#features .container img {
     height: 80vh;
     margin: 0 5vw;
 }
@@ -315,7 +301,7 @@ a {
 
 #topBtn:hover {
 	background-color: #cc322d;
-	color: #ffffff;
+	color: white;
 }
 
 #toggleTheme {
@@ -323,31 +309,6 @@ a {
 	margin: 2px 8px;
 	cursor: pointer;
 	user-select: none;
-}
-
-@keyframes text_reveal_box {
-    50% {
-        width: 100%;
-        left: 0;
-    }
-
-    100% {
-        width: 0;
-        left: 100%;
-    }
-}
-
-@keyframes text_reveal {
-    100% {
-        color: #FFFFFF;
-    }
-}
-
-@keyframes text_reveal_name {
-    100% {
-        color: #cc322d;
-        font-weight: 500;
-    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -400,7 +361,7 @@ a {
         min-height: 70vh;
     }
 
-    #features img {
+    #features .container img {
         width: 40vw;
         height: auto;
     }
@@ -414,24 +375,11 @@ a {
         line-height: normal;
     }
 
-    #download h1 {
-        font-size: 3.5rem;
+    #download {
+        flex-direction: column;
     }
-}
-
-@media only screen and (min-width: 1200px) {
-    #download div {
-        position: relative;
-        left: 13%;
-    }
-
-    #download h1,
-    .content h1 {
-        font-size: 6rem;
-    }
-
-    #download a {
-        font-size: 2.5rem;
-        padding: 16px 24px;
-    }
+    
+    #download img {
+		margin-bottom: 10vh;
+	}
 }
