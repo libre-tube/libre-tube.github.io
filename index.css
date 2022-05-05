@@ -14,9 +14,17 @@ html {
     color: #FFFFFF;
 }
 
-html .light {
+.light {
 	background: white;
 	color: black !important;
+}
+
+.light h1 {
+	color: black !important;
+}
+
+.light a {
+	color: #cc322d !important;
 }
 
 a {
