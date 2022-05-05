@@ -49,3 +49,11 @@ function switchToggle() {
 /* Fade-In Image Amimations */
 
 AOS.init();
+
+/* Theme Toggle */
+
+const themeToggleBtn = document.getElementById('toggleTheme');
+
+themeToggleBtn.addEventListener('click', () => {
+    document.querySelector('main').classList.toggle('light');
+});
