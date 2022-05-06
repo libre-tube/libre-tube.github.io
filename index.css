@@ -1,3 +1,5 @@
+
+
 @import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap';
 
 * {
@@ -38,10 +40,10 @@ a {
 }
 
 #toggleTheme {
-	font-size: 24px;
-	margin: 2px 8px;
-	cursor: pointer;
-	user-select: none;
+    font-size: 24px;
+    margin: 2px 8px;
+    cursor: pointer;
+    user-select: none;
 }
 
 #header {
@@ -57,7 +59,7 @@ a {
 }
 
 #header .brand {
-	display: flex;
+    display: flex;
 }
 
 #header .brand a {
@@ -148,11 +150,11 @@ a {
 }
 
 #download p {
-	font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 #download a {
-	background-color: var(--primary);
+    background-color: var(--primary);
     display: inline-block;
     padding: 2rem 3.5rem;
     margin-top: 1rem;
@@ -236,7 +238,8 @@ a {
     word-wrap: break-word;
 }
 
-#faq a, #faq p span {
+#faq a,
+#faq p span {
     color: var(--primary);
     cursor: pointer;
 }
@@ -289,7 +292,7 @@ a {
 
 #topBtn {
     display: none;
-	user-select: none;
+    user-select: none;
     cursor: pointer;
     position: fixed;
     bottom: 2rem;
@@ -300,28 +303,28 @@ a {
 }
 
 #topBtn:before {
-  content: '';
-  position: absolute;
-  inset: 37%;
-  transform: translateY(30%) rotate(-45deg);
-  border-top: 2px solid var(--primary);
-  border-right: 2px solid var(--primary);
+    content: '';
+    position: absolute;
+    inset: 37%;
+    transform: translateY(30%) rotate(-45deg);
+    border-top: 2px solid var(--primary);
+    border-right: 2px solid var(--primary);
 }
 
 #topBtn:hover {
-	background-color: var(--primary);
+    background-color: var(--primary);
 }
 
 #topBtn:hover:before {
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
 }
 
 @media only screen and (max-width: 768px) {
     .light #download {
         background-image: none;
     }
-    
+
     #header #toggle-button {
         display: inline-block;
         user-select: none;
@@ -366,7 +369,7 @@ a {
         background-image: url(assets/backgroundmobile.png);
         background-size: cover;
     }
-    
+
     #download img {
         width: 30vw;
         height: auto;

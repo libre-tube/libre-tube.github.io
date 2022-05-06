@@ -53,21 +53,20 @@ function switchToggle() {
 /* Copy to Clipboard */
 
 const donationBtns = document.querySelectorAll('#faq p')
-donationBtns.forEach( donationBtn => {
+donationBtns.forEach(donationBtn => {
     donationBtn.addEventListener('click', () => {
-	var text = donationBtn.querySelector('span').innerHTML
-	copyToClipboard(text);
+        var text = donationBtn.querySelector('span').innerHTML
+        copyToClipboard(text);
     });
 });
 
 function copyToClipboard(text) {
-  Clipboard.copy(text);
-  alert("Copied: " + text);
+    Clipboard.copy(text);
+    alert("Copied: " + text);
 }
 
 window.Clipboard = (function(window, document, navigator) {
-    var textArea,
-        copy;
+    var textArea, copy;
 
     function isOS() {
         return navigator.userAgent.match(/ipad|iphone/i);
@@ -80,9 +79,7 @@ window.Clipboard = (function(window, document, navigator) {
     }
 
     function selectText() {
-        var range,
-            selection;
-
+        var range, selection;
         if (isOS()) {
             range = document.createRange();
             range.selectNodeContents(textArea);
@@ -95,17 +92,15 @@ window.Clipboard = (function(window, document, navigator) {
         }
     }
 
-    function copyToClipboard() {        
+    function copyToClipboard() {
         document.execCommand('copy');
         document.body.removeChild(textArea);
     }
-
     copy = function(text) {
         createTextArea(text);
         selectText();
         copyToClipboard();
     };
-
     return {
         copy: copy
     };
@@ -124,9 +119,9 @@ changeString();
 
 function changeString() {
     changeStrings.forEach(function(string, index) {
-	setTimeout(() => {
-	changeText.innerHTML = string;
-	}, index * 2000);
+        setTimeout(() => {
+            changeText.innerHTML = string;
+        }, index * 2000);
     });
     setTimeout(changeString, 10000)
 }
