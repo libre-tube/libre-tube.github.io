@@ -70,7 +70,7 @@ AOS.init();
 
 /* Text Change */
 
-const changeStrings = ['Features', 'Trends', 'Subscriptions', 'Playlists', 'Video Player', 'Subtitles'];
+const changeStrings = ['Open Source', 'Trends', 'Subscriptions', 'Playlists', 'Subtitles'];
 const changeText = document.getElementById('changeText');
 
 changeString();

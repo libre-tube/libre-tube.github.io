@@ -10,7 +10,7 @@
     --bg-color: #201a1a;
     --primary: #cc322d;
     --text: #ffffff;
-    --features: #993030;
+    --features: #FF3E3E;
     --header: #201a1a;
 }
 
@@ -18,7 +18,7 @@
     --bg-color: #E5F3F7;
     --primary: #1a73e8;
     --text: #000000;
-    --features: #1a73e8;
+    --features: #33cdd2;
     --header: #E5F3F7;
 }
 
@@ -107,6 +107,7 @@ a {
 
 #download {
     background-image: url(assets/background.png);
+    backdrop-filter: invert(1);
     background-repeat: no-repeat;
     background-size: contain;
     min-height: 100vh;
@@ -357,6 +358,15 @@ a {
     #download {
         background-image: url(assets/backgroundmobile.png);
         background-size: cover;
+    }
+    
+    #download img {
+        width: 30vw;
+        height: auto;
+    }
+
+    #download #changeText {
+        font-size: 2rem;
     }
 
     #features .container {
