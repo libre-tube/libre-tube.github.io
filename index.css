@@ -210,7 +210,7 @@ a {
     text-align: center;
     display: flex;
     justify-content: center;
-    margin: 0 3vw;
+    margin: 5vh 3vw;
 }
 
 #faq h1 {
@@ -226,14 +226,12 @@ a {
 #faq p {
     font-size: 2rem;
     line-height: 2.5rem;
-}
-
-#faq a {
-    color: var(--primary);
-}
-
-#btc {
     word-wrap: break-word;
+}
+
+#faq a, #faq p span {
+    color: var(--primary);
+    cursor: pointer;
 }
 
 #footer {
