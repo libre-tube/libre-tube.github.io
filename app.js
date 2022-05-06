@@ -6,13 +6,12 @@ themeToggleBtn.addEventListener('click', () => {
     document.querySelector('html').classList.toggle('light');
 });
 
-/* Header Background & ScrollToTOp Button*/
+/* ScrollToTOp Button */
 
 window.onscroll = function() {
     scrollFunction()
 };
 
-const header = document.getElementById('header');
 const topBtn = document.getElementById('topBtn');
 
 function scrollFunction() {
@@ -53,3 +52,19 @@ function switchToggle() {
 /* Fade-In Image Amimations */
 
 AOS.init();
+
+/* Text Change */
+
+const changeStrings = ['Features', 'Trends', 'Subscriptions', 'Playlists', 'Video Player', 'Subtitles'];
+const changeText = document.getElementById('changeText');
+
+changeString();
+
+function changeString() {
+    changeStrings.forEach(function(string, index) {
+	setTimeout(() => {
+	changeText.innerHTML = string;
+	}, index * 2000);
+    });
+    setTimeout(changeString, 10000)
+}

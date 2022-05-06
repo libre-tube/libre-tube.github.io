@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap';
 
 * {
     padding: 0;
@@ -55,6 +55,7 @@ a {
 
 #header .brand h1 {
     font-size: 3rem;
+    font-weight: 500;
     text-transform: uppercase;
     color: var(--text);
 }
@@ -87,7 +88,7 @@ a {
 
 #header .nav-list a {
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     padding: 20px;
@@ -116,8 +117,7 @@ a {
 }
 
 #download div {
-	margin: 20vh 5vw;
-	margin-bottom: 10vh 5vw;
+    margin: 0 5vw;
 }
 
 #download img {
@@ -126,11 +126,18 @@ a {
 }
 
 #download h1 {
-    font: 700 3rem/2.75rem "Montserrat", sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 #download h1 span {
+    color: var(--primary)
+}
+
+#download #changeText {
+    text-transform: uppercase;
     color: var(--primary);
+    font-weight: 700;
 }
 
 #download p {
@@ -141,7 +148,7 @@ a {
 	background-color: var(--primary);
     display: inline-block;
     padding: 2rem 3.5rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-right: 0.5rem;
     border: 2px solid var(--primary);
     border-radius: 2rem;
@@ -247,6 +254,7 @@ a {
 
 #footer .brand h1 {
     font-size: 3rem;
+    font-weight: 500;
     text-transform: uppercase;
     color: #ffffff;
 }
@@ -256,7 +264,7 @@ a {
 }
 
 #footer h2 {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.8rem;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -370,12 +378,4 @@ a {
         font-size: 1rem;
         line-height: normal;
     }
-
-    #download {
-        flex-direction: column;
-    }
-    
-    #download img {
-		margin-bottom: 10vh;
-	}
 }
