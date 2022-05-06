@@ -3,7 +3,7 @@
 const themeToggleBtn = document.getElementById('toggleTheme');
 
 themeToggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('light');
+    document.querySelector('html').classList.toggle('light');
 });
 
 /* Header Background & ScrollToTOp Button*/
