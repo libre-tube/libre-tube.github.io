@@ -37,6 +37,13 @@ a {
     cursor: pointer;
 }
 
+#toggleTheme {
+	font-size: 24px;
+	margin: 2px 8px;
+	cursor: pointer;
+	user-select: none;
+}
+
 #header {
     position: fixed;
     z-index: 1000;
@@ -53,14 +60,14 @@ a {
 	display: flex;
 }
 
-#header .brand h1 {
+#header .brand a {
     font-size: 3rem;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--text);
 }
 
-#header .brand h1 span {
+#header .brand span {
     color: var(--primary);
 }
 
@@ -247,17 +254,13 @@ a {
 }
 
 #footer .brand {
-	display: flex;
-}
-
-#footer .brand h1 {
     font-size: 3rem;
     font-weight: 500;
     text-transform: uppercase;
     color: #ffffff;
 }
 
-#footer .brand h1 span {
+#footer .brand span {
     color: var(--primary);
 }
 
@@ -285,35 +288,40 @@ a {
 }
 
 #topBtn {
-	display: none;
+    display: none;
 	user-select: none;
-	background-color: #000;
-	color: var(--primary);
-	position: fixed;
-	bottom: 2rem;
-	right: 3rem;
-	z-index: 99;
-	cursor: pointer;
-	padding: 1.8rem 0.9rem;
-	border-radius: 1rem;
-	font-size: 1.5rem;
-	font-weight: bolder;
-	transform: scale(1.7, 1);
+    cursor: pointer;
+    position: fixed;
+    bottom: 2rem;
+    right: 3rem;
+    background-color: #000;
+    padding: 2.7rem;
+    border-radius: 1.7rem;
+}
+
+#topBtn:before {
+  content: '';
+  position: absolute;
+  inset: 37%;
+  transform: translateY(30%) rotate(-45deg);
+  border-top: 2px solid var(--primary);
+  border-right: 2px solid var(--primary);
 }
 
 #topBtn:hover {
 	background-color: var(--primary);
-	color: white;
 }
 
-#toggleTheme {
-	font-size: 24px;
-	margin: 2px 8px;
-	cursor: pointer;
-	user-select: none;
+#topBtn:hover:before {
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
 }
 
 @media only screen and (max-width: 768px) {
+    .light #download {
+        background-image: none;
+    }
+    
     #header #toggle-button {
         display: inline-block;
         user-select: none;

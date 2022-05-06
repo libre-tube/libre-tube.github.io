@@ -8,11 +8,12 @@ themeToggleBtn.addEventListener('click', () => {
 
 /* ScrollToTOp Button */
 
+const topBtn = document.getElementById('topBtn');
+
 window.onscroll = function() {
     scrollFunction()
 };
-
-const topBtn = document.getElementById('topBtn');
+scrollFunction();
 
 function scrollFunction() {
     scrollPos = window.scrollY;
@@ -60,9 +61,55 @@ donationBtns.forEach( donationBtn => {
 });
 
 function copyToClipboard(text) {
-  navigator.clipboard.writeText(text);
+  Clipboard.copy(text);
   alert("Copied: " + text);
 }
+
+window.Clipboard = (function(window, document, navigator) {
+    var textArea,
+        copy;
+
+    function isOS() {
+        return navigator.userAgent.match(/ipad|iphone/i);
+    }
+
+    function createTextArea(text) {
+        textArea = document.createElement('textArea');
+        textArea.value = text;
+        document.body.appendChild(textArea);
+    }
+
+    function selectText() {
+        var range,
+            selection;
+
+        if (isOS()) {
+            range = document.createRange();
+            range.selectNodeContents(textArea);
+            selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            textArea.setSelectionRange(0, 999999);
+        } else {
+            textArea.select();
+        }
+    }
+
+    function copyToClipboard() {        
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+    }
+
+    copy = function(text) {
+        createTextArea(text);
+        selectText();
+        copyToClipboard();
+    };
+
+    return {
+        copy: copy
+    };
+})(window, document, navigator);
 
 /* Fade-In Image Amimations */
 
