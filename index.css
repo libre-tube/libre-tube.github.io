@@ -10,7 +10,7 @@
     --bg-color: #201a1a;
     --primary: #cc322d;
     --text: #ffffff;
-    --features: #993030;
+    --features: #FF3E3E;
     --header: #201a1a;
 }
 
@@ -18,7 +18,7 @@
     --bg-color: #E5F3F7;
     --primary: #1a73e8;
     --text: #000000;
-    --features: #1a73e8;
+    --features: #33cdd2;
     --header: #E5F3F7;
 }
 
@@ -210,7 +210,7 @@ a {
     text-align: center;
     display: flex;
     justify-content: center;
-    margin: 0 3vw;
+    margin: 5vh 3vw;
 }
 
 #faq h1 {
@@ -226,14 +226,12 @@ a {
 #faq p {
     font-size: 2rem;
     line-height: 2.5rem;
-}
-
-#faq a {
-    color: var(--primary);
-}
-
-#btc {
     word-wrap: break-word;
+}
+
+#faq a, #faq p span {
+    color: var(--primary);
+    cursor: pointer;
 }
 
 #footer {
@@ -359,6 +357,15 @@ a {
     #download {
         background-image: url(assets/backgroundmobile.png);
         background-size: cover;
+    }
+    
+    #download img {
+        width: 30vw;
+        height: auto;
+    }
+
+    #download #changeText {
+        font-size: 2rem;
     }
 
     #features .container {

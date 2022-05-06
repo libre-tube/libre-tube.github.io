@@ -49,13 +49,28 @@ function switchToggle() {
     toggleButton.innerHTML = toggleButton.innerHTML === '×' ? '≡' : '×';
 }
 
+/* Copy to Clipboard */
+
+const donationBtns = document.querySelectorAll('#faq p')
+donationBtns.forEach( donationBtn => {
+    donationBtn.addEventListener('click', () => {
+	var text = donationBtn.querySelector('span').innerHTML
+	copyToClipboard(text);
+    });
+});
+
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text);
+  alert("Copied: " + text);
+}
+
 /* Fade-In Image Amimations */
 
 AOS.init();
 
 /* Text Change */
 
-const changeStrings = ['Features', 'Trends', 'Subscriptions', 'Playlists', 'Video Player', 'Subtitles'];
+const changeStrings = ['Open Source', 'Trends', 'Subscriptions', 'Playlists', 'Subtitles'];
 const changeText = document.getElementById('changeText');
 
 changeString();
