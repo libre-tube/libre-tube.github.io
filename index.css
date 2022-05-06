@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap';
 
 * {
     padding: 0;
@@ -6,61 +6,28 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-color: #201a1a;
+    --primary: #cc322d;
+    --text: #ffffff;
+    --features: #993030;
+    --header: #201a1a;
+}
+
+.light {
+    --bg-color: #E5F3F7;
+    --primary: #1a73e8;
+    --text: #000000;
+    --features: #1a73e8;
+    --header: #E5F3F7;
+}
+
 html {
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
-    background: #201a1a;
-    color: #ffffff;
-}
-
-.light #header .nav-list a:hover {
-	color: #1a73e8;
-}
-
-.light main {
-	background: #E5F3F7;
-	color: black !important;
-}
-
-.light main h1 {
-	color: black !important;
-}
-
-.light #features h2 {
-	background: #1a73e8 !important;
-	color: #E5F3F7 !important;
-}
-
-.light main a {
-	color: #1a73e8 !important;
-}
-
-.light span {
-	color: #1a73e8 !important;
-}
-
-.light #download {
-    background: #E5F3F7;
-}
-
-.light #download a {
-	border: 2px solid #1a73e8;
-	background: #1a73e8;
-	color: white !important;
-}
-
-.light #download a:hover {
-	background: transparent;
-	color: #1a73e8 !important;
-}
-
-.light #topBtn {
-    color: #1a73e8;
-}
-
-.light #topBtn:hover {
-    background: #1a73e8;
+    background: var(--bg-color);
+    color: var(--text);
 }
 
 a {
@@ -68,19 +35,6 @@ a {
     text-decoration: none;
     user-select: none;
     cursor: pointer;
-}
-
-.brand {
-	display: flex;
-}
-
-.brand h1 {
-    font-size: 3rem;
-    text-transform: uppercase;
-}
-
-.brand h1 span {
-    color: #cc322d;
 }
 
 #header {
@@ -92,7 +46,22 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #201a1a;
+    background: var(--header);
+}
+
+#header .brand {
+	display: flex;
+}
+
+#header .brand h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--text);
+}
+
+#header .brand h1 span {
+    color: var(--primary);
 }
 
 #header .nav-bar {
@@ -119,16 +88,17 @@ a {
 
 #header .nav-list a {
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     padding: 20px;
     display: block;
+    color: var(--text);
 }
 
 #header .nav-list a:hover,
 #header .current {
-    color: #cc322d;
+    color: var(--primary);
 }
 
 #header #toggle-button {
@@ -147,8 +117,7 @@ a {
 }
 
 #download div {
-	margin: 20vh 5vw;
-	margin-bottom: 10vh 5vw;
+    margin: 0 5vw;
 }
 
 #download img {
@@ -157,11 +126,18 @@ a {
 }
 
 #download h1 {
-    font: 700 3rem/2.75rem "Montserrat", sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 #download h1 span {
-    color: #cc322d;
+    color: var(--primary)
+}
+
+#download #changeText {
+    text-transform: uppercase;
+    color: var(--primary);
+    font-weight: 700;
 }
 
 #download p {
@@ -169,19 +145,19 @@ a {
 }
 
 #download a {
-	background-color: #cc322d;
+	background-color: var(--primary);
     display: inline-block;
     padding: 2rem 3.5rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-right: 0.5rem;
-    border: 2px solid #cc322d;
+    border: 2px solid var(--primary);
     border-radius: 2rem;
     font: 700 1.5rem/0 "Montserrat", sans-serif;
 }
 
 #download a:hover {
     background-color: transparent;
-    color: #cc322d;
+    color: var(--primary);
 }
 
 #features .container img {
@@ -208,8 +184,8 @@ a {
 
 #features h2 {
     font-family: "Poppins", sans-serif;
-    background: #993030;
-    color: #201a1a;
+    background-color: var(--features);
+    color: var(--bg-color);
     text-transform: uppercase;
     border-radius: 2rem;
     font-weight: 700;
@@ -253,7 +229,7 @@ a {
 }
 
 #faq a {
-    color: #cc322d;
+    color: var(--primary);
 }
 
 #btc {
@@ -262,6 +238,7 @@ a {
 
 #footer {
     background-image: linear-gradient(60deg, #2b2929 0%, #373737 100%);
+    color: #ffffff;
     flex-direction: column;
     padding-top: 32px;
     padding-bottom: 10px;
@@ -271,8 +248,23 @@ a {
     justify-content: center;
 }
 
-#footer h2 {
+#footer .brand {
+	display: flex;
+}
+
+#footer .brand h1 {
+    font-size: 3rem;
     font-weight: 500;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+#footer .brand h1 span {
+    color: var(--primary);
+}
+
+#footer h2 {
+    font-weight: 400;
     font-size: 1.8rem;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -298,7 +290,7 @@ a {
 	display: none;
 	user-select: none;
 	background-color: #000;
-	color: #cc322d;
+	color: var(--primary);
 	position: fixed;
 	bottom: 2rem;
 	right: 3rem;
@@ -312,7 +304,7 @@ a {
 }
 
 #topBtn:hover {
-	background-color: #cc322d;
+	background-color: var(--primary);
 	color: white;
 }
 
@@ -338,7 +330,7 @@ a {
     }
 
     #header .nav-list {
-        background: #201a1a;
+        background: var(--bg-color);
         position: absolute;
         width: 100vw;
         height: 100vh;
@@ -386,12 +378,4 @@ a {
         font-size: 1rem;
         line-height: normal;
     }
-
-    #download {
-        flex-direction: column;
-    }
-    
-    #download img {
-		margin-bottom: 10vh;
-	}
 }
