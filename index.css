@@ -107,7 +107,6 @@ a {
 
 #download {
     background-image: url(assets/background.png);
-    backdrop-filter: invert(1);
     background-repeat: no-repeat;
     background-size: contain;
     min-height: 100vh;
