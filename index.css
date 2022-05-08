@@ -24,6 +24,10 @@
     --header: #E5F3F7;
 }
 
+.light #download {
+    background-image: none;
+}
+
 html {
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
@@ -117,9 +121,9 @@ a {
 #download {
     background-image: url(assets/background.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    min-height: 100vh;
-    width: 100%;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -321,10 +325,6 @@ a {
 }
 
 @media only screen and (max-width: 768px) {
-    .light #download {
-        background-image: none;
-    }
-
     #header #toggle-button {
         display: inline-block;
         user-select: none;
@@ -367,7 +367,6 @@ a {
 
     #download {
         background-image: url(assets/backgroundmobile.png);
-        background-size: cover;
     }
 
     #download img {
