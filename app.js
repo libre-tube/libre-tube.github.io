@@ -1,3 +1,33 @@
+/**
+ *
+ * @source: app.js
+ *
+ * @licstart  The following is the entire license notice for the 
+ *  JavaScript code in this page.
+ *
+ * Copyright (C) 2014  Loic J. Duros
+ *
+ *
+ * The JavaScript code in this page is free software: you can
+ * redistribute it and/or modify it under the terms of the GNU
+ * General Public License (GNU GPL) as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option)
+ * any later version.  The code is distributed WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+ *
+ * As additional permission under GNU GPL version 3 section 7, you
+ * may distribute non-source (e.g., minimized or compacted) forms of
+ * that code without the copy of the GNU GPL normally required by
+ * section 4, provided you include this license notice and a URL
+ * through which recipients can access the Corresponding Source.
+ *
+ * @licend  The above is the entire license notice
+ * for the JavaScript code in this page.
+ *
+ */
+
+
 /* Theme Toggle */
 
 const themeToggleBtn = document.getElementById('toggleTheme');
@@ -106,10 +136,6 @@ window.Clipboard = (function(window, document, navigator) {
     };
 })(window, document, navigator);
 
-/* Fade-In Image Amimations */
-
-AOS.init();
-
 /* Text Change */
 
 const changeStrings = ['Open Source', 'Trends', 'Subscriptions', 'Playlists', 'Subtitles'];
@@ -125,3 +151,40 @@ function changeString() {
     });
     setTimeout(changeString, 10000)
 }
+
+// ScrollFade 0.1
+
+var fadeElements = document.getElementsByClassName('scrollFade');
+
+function scrollFade() {
+	var viewportBottom = window.scrollY + window.innerHeight;
+
+	for (var index = 0; index < fadeElements.length; index++) {
+		var element = fadeElements[index];
+		var rect = element.getBoundingClientRect();
+
+		var elementFourth = rect.height/4;
+		var fadeInPoint = window.innerHeight - elementFourth;
+		var fadeOutPoint = -(rect.height/2);
+
+		if (rect.top <= fadeInPoint) {
+			element.classList.add('scrollFade--visible');
+			element.classList.add('scrollFade--animate');
+			element.classList.remove('scrollFade--hidden');
+		} else {
+			element.classList.remove('scrollFade--visible');
+			element.classList.add('scrollFade--hidden');
+		}
+
+		if (rect.top <= fadeOutPoint) {
+			element.classList.remove('scrollFade--visible');
+			element.classList.add('scrollFade--hidden');
+		}
+	}
+}
+
+document.addEventListener('scroll', scrollFade);
+window.addEventListener('resize', scrollFade);
+document.addEventListener('DOMContentLoaded', function() {
+    scrollFade();
+});
