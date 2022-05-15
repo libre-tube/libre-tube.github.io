@@ -396,3 +396,19 @@ a {
         line-height: normal;
     }
 }
+
+.scrollFade {
+	opacity: 1;
+}
+
+.scrollFade--hidden {
+	opacity: 0;
+}
+
+.scrollFade--visible {
+	opacity: 1;
+}
+
+.scrollFade--animate {
+	transition: opacity 1s ease-in-out;
+}
