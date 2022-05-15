@@ -1,3 +1,5 @@
+// Licensed under the GPL-3.0 License
+
 /* Theme Toggle */
 
 const themeToggleBtn = document.getElementById('toggleTheme');
