@@ -106,10 +106,6 @@ window.Clipboard = (function(window, document, navigator) {
     };
 })(window, document, navigator);
 
-/* Fade-In Image Amimations */
-
-AOS.init();
-
 /* Text Change */
 
 const changeStrings = ['Open Source', 'Trends', 'Subscriptions', 'Playlists', 'Subtitles'];
