@@ -1,108 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="assets/icon.png">
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        <link rel="stylesheet" href="index.css">
-        <title>LibreTube</title>
-    </head>
-    <body>
-        <section id="header">
-            <div class="nav-bar">
-                <div class="brand" >
-                    <a href="#">Libre<span>Tube</span></a>
-                    <div id="toggleTheme">🌙</div>
-                </div>
-                <ul class="nav-list">
-                    <li><a href="#download">Download</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#footer">Contact</a></li>
-                </ul>
-                <div id="toggle-button">≡</div>
-            </div>
-        </section>
-        <main>
-            <section id="download">
-                <div>
-                    <h1>Libre<span>Tube</span></h1>
-                    <h1 id="changeText">Open Source</h1>
-                    <p>Alternative YouTube frontend for Android built with Piped</p>
-                    <a href="https://github.com/libre-tube/LibreTube/releases/" target="_blank">Download</a>
-                    <a href="https://f-droid.org/en/packages/com.github.libretube/" target="_blank">F-Droid</a>
-                    <a href="#donate">Donate</a>
-                </div>
-                <img src="demo/channel.png">
-            </section>
-            <section id="features">
-                <div class="container">
-                    <img src="demo/trends.png" class="scrollFade">
-                    <div class="scrollFade">
-                        <h2>Trends</h2>
-                        <p>Watch the latest YouTube Trends for your region.</p>
-                    </div>
-                </div>
-                <div class="container second">
-                    <img src="demo/subs.png" class="scrollFade">
-                    <div class="scrollFade">
-                        <h2>Subscriptions</h2>
-                        <p>Subscribe to channels to never miss out their latest videos and create your own playlists.</p>
-                    </div>
-                </div>
-                <div class="container">
-                    <img src="demo/search.png" class="scrollFade">
-                    <div class="scrollFade">
-                        <h2>Search</h2>
-                        <p>Browse YouTube for your favorite content creators and their latest videos.</p>
-                    </div>
-                </div>
-                <div class="container second">
-                    <img src="demo/player.png" class="scrollFade">
-                    <div class="scrollFade">
-                        <h2>Video Player</h2>
-                        <p>Watch videos with advanced features like subtitles, playback speed and different video resolutions.</p>
-                    </div>
-                </div>
-            </section>
-            <section id="faq">
-                <div>
-                    <h1>FAQ</h1>
-                    <h2>Current State</h2>
-                    <p>Now just for early birds, therefore you may encounter issues. If you do, please open an <a href="https://github.com/libre-tube/LibreTube/issues" target="_blank">issue</a> via our GitHub repository.</p>
-                    <h2>Contributing</h2>
-                    <p>Whether you have ideas, translations, design changes, code cleaning, or real heavy code changes, help is always welcome. The more is done the better it gets! If you're interested in contributing, you can browse the <a href="https://github.com/libre-tube/LibreTube/issues" target="_blank">issues</a> or create a new one to discuss your feature idea. Every contribution is very welcome.</p>
-                    <h2>Translating</h2>
-                    <p>You can help translating the app in the language you speak <a href="https://hosted.weblate.org/projects/libretube/libretube/" target="_blank">here</a>.</p>
-                    <h2 id="donate">Donate</h2>
-                    <p>All donations are used towards bringing more features to you and improving the app.</p>
-                    <p>Monero (XMR): <span>44txdmy4E5bDzMYQJh1ZSoHbrp1sWfpGa2FYg26L2ya8EaRejPsh42yVrYhepW9P4YWvrqmTZvms35z5FDgqy1xcVewk18d</span></p>
-                    <p>Bitcoin (BTC): <span>bc1qfcgqwddr894mywn9rk2crzlgvlac3prkwhdrdq</span></p>
-                </div>
-            </section>
-        </main>
-        <section id="footer">
-            <h1 class="brand">Libre<span>Tube</span></h1>
-            <h2>Free and Open Source</h2>
-            <div id="social-icons">
-                <a href="https://github.com/libre-tube/LibreTube" target="_blank">
-                <img src="assets/github.png">
-                </a>
-                <a href="https://t.me/LibreTube" target="_blank">
-                <img src="assets/telegram.png">
-                </a>
-                <a href="https://twitter.com/libretube" target="_blank">
-                <img src="assets/twitter.png">
-                </a>
-                <a href="https://matrix.to/#/#LibreTube:matrix.org" target="_blank">
-                <img src="assets/matrix.png">
-                </a>
-            </div>
-            <p>Licensed under the GPL-3.0 License</p>
-        </section>
-        <div id="topBtn"></div>
-    </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/icon.png">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="index.css">
+  <title>LibreTube</title>
+</head>
+
+<body>
+  <section id="header">
+    <div class="nav-bar">
+      <div class="brand">
+        <a href="#">Libre<span>Tube</span></a>
+        <div id="toggleTheme">🌙</div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="#download">Download</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#footer">Contact</a></li>
+      </ul>
+      <div id="toggle-button">≡</div>
+    </div>
+  </section>
+  <main>
+    <section id="download">
+      <div>
+        <h1>Libre<span>Tube</span></h1>
+        <h1 id="changeText">Open Source</h1>
+        <p>Alternative YouTube frontend for Android built with Piped</p>
+        <a href="https://github.com/libre-tube/LibreTube/releases/" target="_blank">Download</a>
+        <a href="https://f-droid.org/en/packages/com.github.libretube/" target="_blank">F-Droid</a>
+        <a href="#donate">Donate</a>
+      </div>
+      <img src="demo/channel.png">
+    </section>
+    <section id="features">
+      <div class="container">
+        <img src="demo/trends.png" class="scrollFade">
+        <div class="scrollFade">
+          <h2>Trends</h2>
+          <p>Watch the latest YouTube Trends for your region.</p>
+        </div>
+      </div>
+      <div class="container second">
+        <img src="demo/subs.png" class="scrollFade">
+        <div class="scrollFade">
+          <h2>Subscriptions</h2>
+          <p>Subscribe to channels to never miss out their latest videos and create your own playlists.</p>
+        </div>
+      </div>
+      <div class="container">
+        <img src="demo/search.png" class="scrollFade">
+        <div class="scrollFade">
+          <h2>Search</h2>
+          <p>Browse YouTube for your favorite content creators and their latest videos.</p>
+        </div>
+      </div>
+      <div class="container second">
+        <img src="demo/player.png" class="scrollFade">
+        <div class="scrollFade">
+          <h2>Video Player</h2>
+          <p>Watch videos with advanced features like subtitles, playback speed and different video resolutions.</p>
+        </div>
+      </div>
+    </section>
+    <section id="faq">
+      <div>
+        <h1>FAQ</h1>
+        <h2>Current State</h2>
+        <p>Now just for early birds, therefore you may encounter issues. If you do, please open an <a
+            href="https://github.com/libre-tube/LibreTube/issues" target="_blank">issue</a> via our GitHub repository.
+        </p>
+        <h2>Contributing</h2>
+        <p>Whether you have ideas, translations, design changes, code cleaning, or real heavy code changes, help is
+          always welcome. The more is done the better it gets! If you're interested in contributing, you can browse the
+          <a href="https://github.com/libre-tube/LibreTube/issues" target="_blank">issues</a> or create a new one to
+          discuss your feature idea. Every contribution is very welcome.
+        </p>
+        <h2>Translating</h2>
+        <p>You can help translating the app in the language you speak <a
+            href="https://hosted.weblate.org/projects/libretube/libretube/" target="_blank">here</a>.</p>
+        <h2 id="donate">Donate</h2>
+        <p>All donations are used towards bringing more features to you and improving the app.</p>
+        <p>Monero (XMR):
+          <span>44txdmy4E5bDzMYQJh1ZSoHbrp1sWfpGa2FYg26L2ya8EaRejPsh42yVrYhepW9P4YWvrqmTZvms35z5FDgqy1xcVewk18d</span>
+        </p>
+        <p>Bitcoin (BTC): <span>bc1qfcgqwddr894mywn9rk2crzlgvlac3prkwhdrdq</span></p>
+      </div>
+    </section>
+  </main>
+  <section id="footer">
+    <h1 class="brand">Libre<span>Tube</span></h1>
+    <h2>Free and Open Source</h2>
+    <div id="social-icons">
+      <a href="https://github.com/libre-tube/LibreTube" target="_blank">
+        <img src="assets/github.png">
+      </a>
+      <a href="https://t.me/LibreTube" target="_blank">
+        <img src="assets/telegram.png">
+      </a>
+      <a href="https://twitter.com/libretube" target="_blank">
+        <img src="assets/twitter.png">
+      </a>
+      <a href="https://matrix.to/#/#LibreTube:matrix.org" target="_blank">
+        <img src="assets/matrix.png">
+      </a>
+    </div>
+    <p>Licensed under the GPL-3.0 License</p>
+  </section>
+  <div id="topBtn"></div>
+</body>
+
 </html>
 
 <script src="app.js"></script>
