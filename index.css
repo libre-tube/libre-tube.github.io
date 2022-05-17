@@ -7,14 +7,14 @@
 }
 
 :root {
-    --background: #201a1a;
-    --primary: #cc322d;
-    --text: #ffffff;
+    --background: #211A1B;
+    --primary: #FA96AA;
+    --text: #FFFFFF;
 }
 
 .light {
     --background: #E5F3F7;
-    --primary: #1a73e8;
+    --primary: #33CDD2;
     --text: #000000;
 }
 
@@ -152,6 +152,7 @@ a {
 
 #download a {
     background-color: var(--primary);
+    color: var(--background);  
     display: inline-block;
     padding: 2rem 3.5rem;
     margin-top: 1rem;
@@ -189,13 +190,12 @@ a {
 }
 
 #features h2 {
-    font-family: "Poppins", sans-serif;
     background-color: var(--primary);
     color: var(--background);
     text-transform: uppercase;
     border-radius: 2rem;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 1.3rem;
     user-select: none;
     cursor: pointer;
     line-height: 1.5;
