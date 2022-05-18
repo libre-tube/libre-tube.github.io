@@ -138,7 +138,7 @@ window.Clipboard = (function(window, document, navigator) {
 
 /* Text Change */
 
-const changeStrings = ['Open Source', 'Trends', 'Subscriptions', 'Playlists', 'Subtitles'];
+const changeStrings = ['Open Source', 'Subscriptions', 'SponsorBlock', 'User Playlists', 'Search Filters'];
 const changeText = document.getElementById('changeText');
 
 changeString();

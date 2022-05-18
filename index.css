@@ -1,5 +1,3 @@
-
-
 @import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap';
 
 * {
@@ -9,19 +7,15 @@
 }
 
 :root {
-    --bg-color: #201a1a;
-    --primary: #cc322d;
-    --text: #ffffff;
-    --features: #FF3E3E;
-    --header: #201a1a;
+    --background: #211A1B;
+    --primary: #FA96AA;
+    --text: #FFFFFF;
 }
 
 .light {
-    --bg-color: #E5F3F7;
-    --primary: #1a73e8;
+    --background: #E5F3F7;
+    --primary: #33CDD2;
     --text: #000000;
-    --features: #33cdd2;
-    --header: #E5F3F7;
 }
 
 .light #download {
@@ -32,7 +26,7 @@ html {
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
-    background: var(--bg-color);
+    background: var(--background);
     color: var(--text);
 }
 
@@ -59,7 +53,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--header);
+    background: var(--background);
 }
 
 #header .brand {
@@ -102,7 +96,6 @@ a {
 #header .nav-list a {
     font-size: 1.8rem;
     font-weight: 400;
-    letter-spacing: 0.2rem;
     text-transform: uppercase;
     padding: 20px;
     display: block;
@@ -159,6 +152,7 @@ a {
 
 #download a {
     background-color: var(--primary);
+    color: var(--background);  
     display: inline-block;
     padding: 2rem 3.5rem;
     margin-top: 1rem;
@@ -196,13 +190,12 @@ a {
 }
 
 #features h2 {
-    font-family: "Poppins", sans-serif;
-    background-color: var(--features);
-    color: var(--bg-color);
+    background-color: var(--primary);
+    color: var(--background);
     text-transform: uppercase;
     border-radius: 2rem;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 1.3rem;
     user-select: none;
     cursor: pointer;
     line-height: 1.5;
@@ -339,7 +332,7 @@ a {
     }
 
     #header .nav-list {
-        background: var(--bg-color);
+        background: var(--background);
         position: absolute;
         width: 100vw;
         height: 100vh;
