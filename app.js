@@ -27,6 +27,18 @@
  *
  */
 
+/* Localisation */
+
+localize()
+
+function localize() {
+  var supportedLanguages = ['ru'];
+  var language = window.navigator.language;
+  var currentLanguage = document.getElementsByTagName("html")[0].getAttribute("lang");
+  if (currentLanguage != language && supportedLanguages.includes(language)) {
+    window.location.replace(language + '/');
+  }
+}
 
 /* Theme Toggle */
 
