@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/assets/icon.png">
+  <link rel="stylesheet" href="/index.css">
+  <title>LibreTube</title>
+</head>
+
+<body>
+  <section id="header">
+    <div class="nav-bar">
+      <div class="brand">
+        <a href="#">Libre<span>Tube</span></a>
+        <div id="toggleTheme">🌙</div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="#download">Download</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#footer">Kontakt</a></li>
+      </ul>
+      <div id="toggle-button">≡</div>
+    </div>
+  </section>
+  <main>
+    <section id="download">
+      <div>
+        <h1>Libre<span>Tube</span></h1>
+        <h1 id="changeText">Open Source</h1>
+        <p>Alternatives YouTube Fronted basierend auf Piped</p>
+        <a href="https://github.com/libre-tube/LibreTube/releases/" target="_blank">Download</a>
+        <a href="https://f-droid.org/en/packages/com.github.libretube/" target="_blank">F-Droid</a>
+        <a href="#donate">Spenden</a>
+      </div>
+      <img src="/demo/channel.png">
+    </section>
+    <section id="features">
+      <div class="container">
+        <img src="/demo/trends.png" class="scrollFade">
+        <div class="scrollFade">
+          <h2>Trends</h2>
+          <p>Schaue dir die aktuellsten Trends basierend auf deiner Region an.</p>
+        </div>
+      </div>
+      <div class="container second">
+        <img src="/demo/subs.png" class="scrollFade">
+        <div class="scrollFade">
+          <h2>Abonnements</h2>
+          <p>Abonniere Kanäle, um niemals die neuesten Videos deiner Lieblings-YouTuber zu verpassen.</p>
+        </div>
+      </div>
+      <div class="container">
+        <img src="/demo/search.png" class="scrollFade">
+        <div class="scrollFade">
+          <h2>Suche</h2>
+          <p>Durchstöbere YouTube mit der Hilfe von zahlreichen Suchfiltern und -vorschlägen sowie einem Suchverlauf.
+          </p>
+        </div>
+      </div>
+      <div class="container second">
+        <img src="/demo/player.png" class="scrollFade">
+        <div class="scrollFade">
+          <h2>Video-Player</h2>
+          <p>Schaue Videos mit SponsorBlock und zahlreichen anderen nützlichen Funktionen wie zum Beispiel Untertiteln
+            an.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="faq">
+      <div>
+        <h1>FAQ</h1>
+        <h2>Aktueller Stand</h2>
+        <p>Aktuell nur für frühe Vögel, deswegen sind Bugs möglich. Falls du einen bemerkst, melde diesen bitte über
+          unsere <a href="https://github.com/libre-tube/LibreTube/issues" target="_blank">GitHub</a> Repo.
+        </p>
+        <h2>Beitragen</h2>
+        <p>Ob du einfache Ideen hast, UI-Änderungs-Vorschläge, Code-Cleanup, Übersetzungen oder große Änderungen, Hilfe
+          ist immer willkommen. Umso mehr geholfen wird, umso besser wird die App! Falls du interessiert am Beitragen
+          bist, kannst du die
+          <a href="https://github.com/libre-tube/LibreTube/issues" target="_blank">Bugs/Vorschläge</a> auf GitHub
+          durchsuchen oder deine Idee dort diskutieren.
+        </p>
+        <h2>Übersetzen</h2>
+        <p>Du kannst
+          <a href="https://hosted.weblate.org/projects/libretube/libretube/" target="_blank">hier</a>
+          beim Übersetzen der App in der Sprache, die du sprichst, helfen.
+        </p>
+        <h2 id="donate">Spenden</h2>
+        <p>Alle Spenden werden dafür verwendet, die App zu verbessern und mehr Funktionen hinzuzufügen.</p>
+        <p>Monero (XMR):
+          <span>44txdmy4E5bDzMYQJh1ZSoHbrp1sWfpGa2FYg26L2ya8EaRejPsh42yVrYhepW9P4YWvrqmTZvms35z5FDgqy1xcVewk18d</span>
+        </p>
+        <p>Bitcoin (BTC): <span>bc1qfcgqwddr894mywn9rk2crzlgvlac3prkwhdrdq</span></p>
+      </div>
+    </section>
+  </main>
+  <section id="footer">
+    <h1 class="brand">Libre<span>Tube</span></h1>
+    <h2>Kostenlos and Open Source</h2>
+    <div id="social-icons">
+      <a href="https://github.com/libre-tube/LibreTube" target="_blank">
+        <img src="/assets/github.png">
+      </a>
+      <a href="https://t.me/LibreTube" target="_blank">
+        <img src="/assets/telegram.png">
+      </a>
+      <a href="https://twitter.com/libretube" target="_blank">
+        <img src="/assets/twitter.png">
+      </a>
+      <a href="https://matrix.to/#/#LibreTube:matrix.org" target="_blank">
+        <img src="/assets/matrix.png">
+      </a>
+    </div>
+    <p>Lizensiert unter der GPL-3.0 Lizenz</p>
+  </section>
+  <div id="topBtn"></div>
+</body>
+
+<span id="features-text" hidden>Open Source,Abonnements,SponsorBlock,Nutzer-Playlisten,Suchfilter</span>
+
+</html>
+
+<script src="/app.js"></script>
