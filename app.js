@@ -155,7 +155,7 @@ const changeText = document.getElementById('changeText');
 var currentStringIndex = 0
 
 changeString();
-setInterval(changeString, 2000)
+setInterval(changeString, 2000);
 
 function changeString() {
   changeText.innerHTML = featuresStrings[currentStringIndex];
