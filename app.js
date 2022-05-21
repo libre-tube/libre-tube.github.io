@@ -150,18 +150,16 @@ window.Clipboard = (function(window, document, navigator) {
 
 /* Text Change */
 
-const changeStrings = ['Open Source', 'Subscriptions', 'SponsorBlock', 'User Playlists', 'Search Filters'];
+const featuresStrings = document.getElementById('features-text').innerHTML.split(',');
 const changeText = document.getElementById('changeText');
+var currentStringIndex = 0
 
 changeString();
+setInterval(changeString, 2000);
 
 function changeString() {
-  changeStrings.forEach(function(string, index) {
-    setTimeout(() => {
-      changeText.innerHTML = string;
-    }, index * 2000);
-  });
-  setTimeout(changeString, 10000)
+  changeText.innerHTML = featuresStrings[currentStringIndex];
+  currentStringIndex = currentStringIndex != featuresStrings.length - 1 ? currentStringIndex + 1 : 0;
 }
 
 // Scroll Fade
