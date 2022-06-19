@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&family=Montserrat:wght@300;400;700&family=Roboto+Flex:opsz,wght@8..144,100;8..144,400;8..144,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap');
 
 :root {
     --background: #161316;
-    --primary: #FA9688;
+    --accent: #FA9688;
     --text: #FFFFFF;
 }
 
@@ -14,7 +14,12 @@ body {
     margin: 0;
     background-color: var(--background);
     color: var(--text);
-  font-family: 'Roboto Flex', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
 }
 
 #header {
@@ -51,6 +56,8 @@ body {
   align-items: center;
 }
 
+/* startpage */
+
 #get #download {
   display: flex;
   justify-content: center;
@@ -67,6 +74,8 @@ body {
   margin: 0 0.5em;
 }
 
+/* about secion */
+
 #about h1 {
   font-size: 4.2rem;
   text-transform: uppercase;
@@ -74,33 +83,57 @@ body {
 }
 
 .light {
-  font-weight: 100;
+  font-weight: 300;
 }
+
+/* faq */
 
 #faq div {
   margin: 0 20vw;
   width: 60vw;
 }
 
-#faq details {
-  padding: 0.5rem;
+details {
+  margin: 0.5em 0;
 }
 
-#faq summary {
-  font-size: 2rem;
-}
-
-#faq summary:hover {
-  cursor: pointer;
-}
-
-#faq p {
+details p {
   font-size: 1.4rem;
   overflow-wrap: break-word;
-  margin-bottom: 0;  
+  padding: 0 0.3em;
 }
 
-#faq a {
-  text-decoration: none;
+details>summary {
+  list-style-type: none;
+  font-size: 2rem;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid var(--text);
+  padding: 0.5em;
+  border-radius: 0.5em;
 }
 
+details>summary::-webkit-details-marker {
+  display: none;
+}
+
+details>summary::before {
+  content: '+ ';
+}
+
+details[open]>summary::before {
+  content: '- ';
+}
+
+details[open]>summary {
+  margin-bottom: 0.5rem;
+}
+
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -10px}
+  100%  {opacity: 1; margin-left: 0px}
+}
