@@ -2,7 +2,7 @@
 
 :root {
     --background: #161316;
-    --accent: #FA9688;
+    --accent: #FFBBAA;
     --text: #FFFFFF;
 }
 
@@ -14,7 +14,7 @@ body {
     margin: 0;
     background-color: var(--background);
     color: var(--text);
-  font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -28,6 +28,7 @@ a {
   width: 90vw;
   padding: 0 5vw;
   padding-top: 5vh;
+padding-bottom: 2vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,8 +36,9 @@ a {
 }
 
 #brand {
-  height: 7vh;
-  width: auto;
+  height: 2rem;
+content: url("assets/brand.svg");
+margin-left: 0.5em;
 }
 
 #navbar a {
@@ -79,6 +81,7 @@ a {
 #about h1 {
   font-size: 4.2rem;
   text-transform: uppercase;
+	line-height: 1;
   margin: 0;
 }
 
@@ -89,51 +92,98 @@ a {
 /* faq */
 
 #faq div {
-  margin: 0 20vw;
-  width: 60vw;
+  width: 90%;
+  max-width: 1200px;
+	margin: 0.5em 5%;
 }
 
 details {
-  margin: 0.5em 0;
+  margin: .7em 0;
+}
+
+details summary {
+  list-style-type: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: .15em solid dimgrey;
+  padding: 1.5em 2em;
+  border-radius: 2em;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary ~ p {
+  animation: sweep .5s ease-in-out;
 }
 
 details p {
   font-size: 1.4rem;
   overflow-wrap: break-word;
-  padding: 0 0.3em;
+  padding: 0 0.7em;
 }
 
-details>summary {
-  list-style-type: none;
-  font-size: 2rem;
-  outline: none;
-  cursor: pointer;
-  border: 1px solid var(--text);
-  padding: 0.5em;
-  border-radius: 0.5em;
+/* contact */
+
+#contact #sociallinks {
+  display: flex;
 }
 
-details>summary::-webkit-details-marker {
-  display: none;
+#contact #sociallinks a img {
+  height: 10vh;
 }
 
-details>summary::before {
-  content: '+ ';
+/* footer */
+
+#footer {
+  text-align: center;
 }
 
-details[open]>summary::before {
-  content: '- ';
+#footer p {
+  line-height: 1.5;
+  color: var(--accent);
 }
 
-details[open]>summary {
-  margin-bottom: 0.5rem;
+#footer p a {
+  box-shadow: 0 1px var(--accent);
 }
 
-details[open] summary ~ * {
-  animation: sweep .5s ease-in-out;
+/* for mobile devices */
+
+@media only screen and (max-width: 800px) {
+	#brand {
+		content: url("assets/icon.png");
+}
+
+#navbar a {
+font-size: 1.3rem;
+}
+
+	#get #download {
+		flex-direction: column;
+}
+#get #download a img {
+height: 13vh;
+width: auto;
+}
+
+  #contact #sociallinks {
+    flex-direction: column;
+  }
+
 }
 
 @keyframes sweep {
-  0%    {opacity: 0; margin-left: -10px}
-  100%  {opacity: 1; margin-left: 0px}
+  0%    {
+  opacity: 0;
+  margin-left: -10px;
+margin-right: 10px
+}
+  100%  {
+  opacity: 1;
+  margin-left: 0px;
+margin-right: 0px
+}
 }
