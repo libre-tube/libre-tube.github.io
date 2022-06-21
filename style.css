@@ -78,15 +78,44 @@ margin-left: 0.5em;
 
 /* about secion */
 
-#about h1 {
+#about {
+  justify-content: space-between;
+}
+
+#slogan {
+  margin-top: 42vh;
+}
+
+#slogan h1 {
   font-size: 4.2rem;
+  text-align: center;
   text-transform: uppercase;
 	line-height: 1;
   margin: 0;
 }
 
-.light {
+#slogan .light {
   font-weight: 300;
+}
+
+#about #sociallinks {
+  position: relative;
+  margin: 2em 1em;
+  padding: 1.8em 2em;
+  display: flex;
+  border: .2em solid dimgrey; 
+  border-radius: 3rem;
+}
+
+#about #sociallinks a img {
+  width: 2em;
+  margin: 0 1em;
+  height: auto;
+  filter: invert() brightness(0.9);
+}
+
+#about #sociallinks a img:hover {
+  transform: scale(1.2);
 }
 
 /* faq */
