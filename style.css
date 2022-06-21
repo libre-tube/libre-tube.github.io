@@ -125,16 +125,6 @@ details p {
   padding: 0 0.7em;
 }
 
-/* contact */
-
-#contact #sociallinks {
-  display: flex;
-}
-
-#contact #sociallinks a img {
-  height: 10vh;
-}
-
 /* footer */
 
 #footer {
@@ -168,11 +158,6 @@ font-size: 1.3rem;
 height: 13vh;
 width: auto;
 }
-
-  #contact #sociallinks {
-    flex-direction: column;
-  }
-
 }
 
 @keyframes sweep {
