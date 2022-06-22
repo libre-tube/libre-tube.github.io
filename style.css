@@ -139,6 +139,10 @@ margin-left: 0.5em;
 
 /* faq */
 
+#faq {
+  min-height: 90vh;
+}
+
 #faq div {
   width: 90%;
   max-width: 1200px;
@@ -156,7 +160,7 @@ details summary {
   cursor: pointer;
   border: .15em solid var(--grey);
   padding: 1.5em 2em;
-  border-radius: 2em;
+  border-radius: 1.5em;
 }
 
 details summary::-webkit-details-marker {
@@ -168,9 +172,9 @@ details[open] summary ~ p {
 }
 
 details p {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   overflow-wrap: break-word;
-  padding: 0 0.7em;
+  padding: 0 .7em;
 }
 
 /* footer */
