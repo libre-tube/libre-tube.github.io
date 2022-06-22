@@ -84,13 +84,14 @@
  #about #sociallinks {
      position: relative;
      margin: 2em 1em;
-     padding: 1.8em 2em;
+     padding: 3vh 2vw;
      display: flex;
      border: .2em solid var(--grey);
      border-radius: 3rem;
 }
  #about #sociallinks a img {
      width: 2em;
+    max-width: 5vw;
      margin: 0 1em;
      height: auto;
      filter: invert() brightness(0.9);
@@ -156,17 +157,16 @@
 }
 /* for mobile devices */
  @media only screen and (max-width: 800px) {
-     #brand {
-         content: url("assets/icon.png");
-    }
-     #navbar a {
-         font-size: 1.3rem;
-    }
-     #about #sociallinks {
-         transform: scale(0.8);
+    #header {
+    justify-content: center;
+    position: absolute;
+  }
+     #navbar {
+         display: none;
     }
      #get #download {
          flex-direction: column;
+          max-width: 90vw;
     }
      #get #download a img {
          height: 13vh;
