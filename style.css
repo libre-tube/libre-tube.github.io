@@ -4,6 +4,7 @@
     --background: #161316;
     --accent: #FFBBAA;
     --text: #FFFFFF;
+    --grey: dimgrey;
 }
 
 html {
@@ -24,6 +25,7 @@ a {
 
 #header {
   position: fixed;
+  z-index: 1000;
   background-color: var(--background);
   width: 90vw;
   padding: 0 5vw;
@@ -72,7 +74,7 @@ margin-left: 0.5em;
 }
 
 #get #download a img {
-  width: 12vw;
+  width: 15em;
   margin: 0 0.5em;
 }
 
@@ -103,7 +105,7 @@ margin-left: 0.5em;
   margin: 2em 1em;
   padding: 1.8em 2em;
   display: flex;
-  border: .2em solid dimgrey; 
+  border: .2em solid var(--grey); 
   border-radius: 3rem;
 }
 
@@ -116,6 +118,23 @@ margin-left: 0.5em;
 
 #about #sociallinks a img:hover {
   transform: scale(1.2);
+}
+
+/* features */
+
+#features #highlights {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+}
+
+#features #highlights div {
+  padding: 16px 32px;
+  margin: 8px 12px;
+  border: .3em solid var(--grey);
+  border-radius: 3em;
 }
 
 /* faq */
@@ -135,7 +154,7 @@ details summary {
   font-size: 1.2rem;
   font-weight: 500;
   cursor: pointer;
-  border: .15em solid dimgrey;
+  border: .15em solid var(--grey);
   padding: 1.5em 2em;
   border-radius: 2em;
 }
@@ -187,6 +206,10 @@ font-size: 1.3rem;
 height: 13vh;
 width: auto;
 }
+  #features #highlights {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @keyframes sweep {
