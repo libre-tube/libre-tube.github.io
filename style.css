@@ -1,407 +1,192 @@
-@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap';
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap');
+ :root {
+     --background: #161316;
+     --accent: #FFBBAA;
+     --text: #FFFFFF;
+     --grey: dimgrey;
 }
-
-:root {
-    --background: #211A1B;
-    --primary: #FA9688;
-    --text: #FFFFFF;
+ html {
+     scroll-behavior: smooth;
 }
-
-.light {
-    --background: #E5F3F7;
-    --primary: #33CDD2;
-    --text: #000000;
+ body {
+     margin: 0;
+     background-color: var(--background);
+     color: var(--text);
+     font-family: 'Roboto', sans-serif;
 }
-
-.light #download {
-    background-image: none;
+ a {
+     color: var(--accent);
+     text-decoration: none;
 }
-
-html {
-    font-size: 10px;
-    font-family: 'Montserrat', sans-serif;
-    scroll-behavior: smooth;
-    background: var(--background);
-    color: var(--text);
+ #header {
+     position: fixed;
+     z-index: 1000;
+     background-color: var(--background);
+     width: 90vw;
+     padding: 0 5vw;
+     padding-top: 5vh;
+     padding-bottom: 2vh;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
 }
-
-a {
-    color: white;
-    text-decoration: none;
-    user-select: none;
-    cursor: pointer;
+ #brand {
+     height: 2rem;
+     content: url("assets/brand.svg");
+     margin-left: 0.5em;
 }
-
-#toggleTheme {
-    font-size: 24px;
-    margin: 2px 8px;
-    cursor: pointer;
-    user-select: none;
+ #navbar a {
+     color: var(--text);
+     text-transform: uppercase;
+     text-decoration: none;
+     font-size: 1.8rem;
+     margin: 0 1rem;
 }
-
-#header {
-    position: fixed;
-    z-index: 1000;
-    width: 100%;
-    height: auto;
-    min-height: 8vh;
-    display: flex;
-    align-items: center;
+ .container {
+     min-height: 100vh;
+     width: 100vw;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+/* startpage */
+ #get #download {
+     display: flex;
+     justify-content: center;
+}
+ #get h1 {
+     text-transform: uppercase;
+     margin-bottom: 5vh;
+     font-size: 3rem;
+}
+ #get #download a img {
+     width: 15em;
+     margin: 0 0.5em;
+}
+/* about secion */
+ #about {
+     justify-content: space-between;
+}
+ #slogan {
+     margin-top: 42vh;
+}
+ #slogan h1 {
+     font-size: 4.2rem;
+     text-align: center;
+     text-transform: uppercase;
+     line-height: 1;
+     margin: 0;
+}
+ #slogan .light {
+     font-weight: 300;
+}
+ #about #sociallinks {
+     position: relative;
+     margin: 2em 1em;
+     padding: 3vh 2vw;
+     display: flex;
+     border: .2em solid var(--grey);
+     border-radius: 3rem;
+}
+ #about #sociallinks a img {
+     width: 2em;
+    max-width: 5vw;
+     margin: 0 1em;
+     height: auto;
+     filter: invert() brightness(0.9);
+}
+ #about #sociallinks a img:hover {
+     transform: scale(1.2);
+}
+/* features */
+ #features #highlights {
+     max-width: 1000px;
+     margin: 0 auto;
+     display: grid;
+     grid-template-columns: auto auto auto;
+}
+ #features #highlights div {
+     padding: 16px 32px;
+     margin: 8px 12px;
+     border: .3em solid var(--grey);
+     border-radius: 3em;
+}
+/* faq */
+ #faq {
+     min-height: 90vh;
+}
+ #faq div {
+     width: 90%;
+     max-width: 1200px;
+     margin: 0.5em 5%;
+}
+ details {
+     margin: .7em 0;
+}
+ details summary {
+     list-style-type: none;
+     font-size: 1.2rem;
+     font-weight: 500;
+     cursor: pointer;
+     border: .15em solid var(--grey);
+     padding: 1.5em 2em;
+     border-radius: 1.5em;
+}
+ details summary::-webkit-details-marker {
+     display: none;
+}
+ details[open] summary ~ p {
+     animation: sweep .5s ease-in-out;
+}
+ details p {
+     font-size: 1.3rem;
+     overflow-wrap: break-word;
+     padding: 0 .7em;
+}
+/* footer */
+ #footer {
+     text-align: center;
+}
+ #footer p {
+     line-height: 1.5;
+     color: var(--accent);
+}
+ #footer p a {
+     box-shadow: 0 1px var(--accent);
+}
+/* for mobile devices */
+ @media only screen and (max-width: 800px) {
+    #header {
     justify-content: center;
-    background: var(--background);
-}
-
-#header .brand {
-    display: flex;
-}
-
-#header .brand a {
-    font-size: 3rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: var(--text);
-}
-
-#header .brand span {
-    color: var(--primary);
-}
-
-#header .nav-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 100%;
-    max-width: 1300px;
-    padding: 0 10px;
-}
-
-#header .nav-list {
-    position: initial;
-    display: block;
-    height: auto;
-    width: fit-content;
-    background-color: transparent;
-}
-
-#header .nav-list li {
-    display: inline-block;
-}
-
-#header .nav-list a {
-    font-size: 1.8rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    padding: 20px;
-    display: block;
-    color: var(--text);
-}
-
-#header .nav-list a:hover,
-#header .current {
-    color: var(--primary);
-}
-
-#header #toggle-button {
-    display: none;
-}
-
-#download {
-    background-image: url(assets/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#download div {
-    margin: 0 5vw;
-}
-
-#download img {
-    height: 55vh;
-    margin: 0 5vw;
-}
-
-#download h1 {
-    font-size: 3rem;
-    font-weight: 500;
-}
-
-#download h1 span {
-    color: var(--primary)
-}
-
-#download #changeText {
-    text-transform: uppercase;
-    color: var(--primary);
-    font-weight: 700;
-}
-
-#download p {
-    font-size: 1.5rem;
-}
-
-#download a {
-    background-color: var(--primary);
-    color: var(--background);  
-    display: inline-block;
-    padding: 2rem 3.5rem;
-    margin-top: 1rem;
-    margin-right: 0.5rem;
-    border: 2px solid var(--primary);
-    border-radius: 2rem;
-    font: 700 1.5rem/0 "Montserrat", sans-serif;
-}
-
-#download a:hover {
-    background-color: transparent;
-    color: var(--primary);
-}
-
-#features .container img {
-    height: 80vh;
-    margin: 0 5vw;
-}
-
-#features .container {
-    min-height: 100vh;
-    width: 100%;
-    overflow-x: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#features .second {
-    flex-direction: row-reverse;
-}
-
-#features div div {
-    margin: 0 5vw;
-}
-
-#features h2 {
-    background-color: var(--primary);
-    color: var(--background);
-    text-transform: uppercase;
-    border-radius: 2rem;
-    font-weight: 700;
-    font-size: 1.3rem;
-    user-select: none;
-    cursor: pointer;
-    line-height: 1.5;
-    padding: 6px 30px;
-    margin-bottom: 12px;
-    display: inline-block;
-}
-
-#features p {
-    max-width: 30vw;
-    font-size: 2rem;
-    line-height: 2.5rem;
-}
-
-#faq {
-    flex-direction: column;
-    min-height: 100vh;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin: 5vh 3vw;
-}
-
-#faq h1 {
-    font-size: 4rem;
-    margin: 16px;
-}
-
-#faq h2 {
-    margin-top: 16px;
-    font-size: 3rem;
-}
-
-#faq p {
-    font-size: 2rem;
-    line-height: 2.5rem;
-    word-wrap: break-word;
-}
-
-#faq a,
-#faq p span {
-    color: var(--primary);
-    cursor: pointer;
-}
-
-#footer {
-    background-image: linear-gradient(60deg, #2b2929 0%, #373737 100%);
-    color: #ffffff;
-    flex-direction: column;
-    padding-top: 32px;
-    padding-bottom: 10px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#footer .brand {
-    font-size: 3rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #ffffff;
-}
-
-#footer .brand span {
-    color: var(--primary);
-}
-
-#footer h2 {
-    font-weight: 400;
-    font-size: 1.8rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-#footer #social-icons {
-    display: flex;
-    margin-bottom: 16px;
-    filter: invert(0.8);
-}
-
-#footer #social-icons a img {
-    height: 32px;
-    width: 32px;
-    margin: 0 8px;
-}
-
-#footer p {
-    font-size: 1.3rem;
-}
-
-#topBtn {
-    display: none;
-    user-select: none;
-    cursor: pointer;
-    position: fixed;
-    bottom: 2rem;
-    right: 3rem;
-    background-color: #000;
-    padding: 2.7rem;
-    border-radius: 1.7rem;
-}
-
-#topBtn:before {
-    content: '';
     position: absolute;
-    inset: 37%;
-    transform: translateY(30%) rotate(-45deg);
-    border-top: 2px solid var(--primary);
-    border-right: 2px solid var(--primary);
+  }
+     #navbar {
+         display: none;
+    }
+     #get #download {
+         flex-direction: column;
+          max-width: 90vw;
+    }
+     #get #download a img {
+         height: 13vh;
+         width: auto;
+    }
+     #features #highlights {
+         display: flex;
+         flex-direction: column;
+    }
 }
-
-#topBtn:hover {
-    background-color: var(--primary);
-}
-
-#topBtn:hover:before {
-    border-top: 2px solid #fff;
-    border-right: 2px solid #fff;
-}
-
-@media only screen and (max-width: 768px) {
-    #header #toggle-button {
-        display: inline-block;
-        user-select: none;
-        font-size: 4rem;
-        cursor: pointer;
-        margin: auto 1rem;
-        opacity: 0.5;
+ @keyframes sweep {
+     0% {
+         opacity: 0;
+         margin-left: -10px;
+         margin-right: 10px 
     }
-
-    #header #toggle-button:hover {
-        opacity: 0.9;
-    }
-
-    #header .nav-list {
-        background: var(--background);
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        left: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: 0.5s ease left;
-    }
-
-    #header .nav-list li {
-        text-align: center;
-    }
-
-    #header .nav-list li a {
-        font-size: 2.5rem;
-    }
-
-    #header .nav-list.active {
-        left: 0;
-        transition: 0.5s ease left;
-    }
-
-    #download {
-        background-image: url(assets/backgroundmobile.png);
-    }
-
-    #download img {
-        width: 30vw;
-        height: auto;
-    }
-
-    #download #changeText {
-        font-size: 2rem;
-    }
-
-    #features .container {
-        min-height: 70vh;
-    }
-
-    #features .container img {
-        width: 40vw;
-        height: auto;
-    }
-
-    #features h2 {
-        font-size: 1rem;
-    }
-
-    #features p {
-        font-size: 1rem;
-        line-height: normal;
+     100% {
+         opacity: 1;
+         margin-left: 0px;
+         margin-right: 0px 
     }
 }
 
-.scrollFade {
-	opacity: 1;
-}
-
-.scrollFade--hidden {
-	opacity: 0;
-}
-
-.scrollFade--visible {
-	opacity: 1;
-}
-
-.scrollFade--animate {
-	transition: opacity 1s ease-in-out;
-}
