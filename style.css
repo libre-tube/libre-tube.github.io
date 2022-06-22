@@ -203,6 +203,10 @@ details p {
 font-size: 1.3rem;
 }
 
+  #about #sociallinks {
+    transform: scale(0.8);
+  }
+
 	#get #download {
 		flex-direction: column;
 }
