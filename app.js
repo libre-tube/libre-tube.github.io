@@ -51,3 +51,5 @@ function getScrollbarWidth() {
 }
 
 document.querySelector('#header').style.width = `calc(100vw - ${getScrollbarWidth()}px)`
+
+document.querySelector('#year').textContent = new Date().getFullYear()
