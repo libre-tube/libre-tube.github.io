@@ -2,7 +2,7 @@
  *
  * @source: app.js
  *
- * @licstart  The following is the entire license notice for the 
+ * @licstart  The following is the entire license notice for the
  *  JavaScript code in this page.
  *
  * Copyright (C) 2014  Loic J. Duros
@@ -30,16 +30,26 @@
 /* faq: close other details when one is opened */
 
 // Fetch all the details element.
-const details = document.querySelectorAll("details");
+const details = document.querySelectorAll('details')
 
 // Add the onclick listeners.
 details.forEach((targetDetail) => {
-  targetDetail.addEventListener("click", () => {
+  targetDetail.addEventListener('click', () => {
     // Close all the details that are not targetDetail.
     details.forEach((detail) => {
       if (detail !== targetDetail) {
-        detail.removeAttribute("open");
+        detail.removeAttribute('open')
       }
-    });
-  });
-});
+    })
+  })
+})
+
+function getScrollbarWidth() {
+  var child = document.querySelector('#get')
+  var scroll = window.innerWidth - child.offsetWidth
+  return scroll
+}
+
+document.querySelector('#header').style.width = `calc(100vw - ${getScrollbarWidth()}px)`
+
+document.querySelector('#year').textContent = new Date().getFullYear()
