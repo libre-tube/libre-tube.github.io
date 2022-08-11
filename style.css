@@ -2,6 +2,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
+  font-display: swap;
   src: url("fonts/roboto-v30-latin-300.woff2") format("woff2");
 }
 
@@ -9,6 +10,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url("fonts/roboto-v30-latin-regular.woff2") format("woff2");
 }
 
@@ -16,6 +18,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
   src: url("fonts/roboto-v30-latin-500.woff2") format("woff2");
 }
 
@@ -23,6 +26,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url("fonts/roboto-v30-latin-700.woff2") format("woff2");
 }
 
@@ -74,7 +78,7 @@ nav {
 nav a {
   color: var(--text);
   text-transform: uppercase;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 section {
@@ -167,6 +171,10 @@ section {
   padding: 0.5rem 1.8rem;
   border: 0.2rem solid var(--grey);
   border-radius: 3rem;
+}
+
+.highlights h2 {
+  font-size: 1.4rem;
 }
 
 /* FAQ Section */
