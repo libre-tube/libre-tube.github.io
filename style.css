@@ -83,8 +83,6 @@ nav a {
 
 section {
   min-height: 100vh;
-  width: 100vw;
-  max-width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,6 +93,8 @@ section {
 .download-links {
   display: flex;
   column-gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .download h1 {
@@ -158,7 +158,7 @@ section {
 
 /* Features Section */
 .highlights {
-  max-width: 80%;
+  max-width: 90%;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
