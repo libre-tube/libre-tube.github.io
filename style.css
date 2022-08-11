@@ -67,7 +67,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 2.5rem 1.5rem 2rem;
+  padding: 2rem 5rem;
 }
 
 nav {
@@ -81,7 +81,7 @@ nav a {
   font-size: 1.5rem;
 }
 
-section {
+section:not(:last-child) {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -109,7 +109,7 @@ section {
 
 /* About Section */
 #about {
-  padding-top: 1rem;
+  padding-top: 4rem;
 }
 
 .slogan h1 {
@@ -178,8 +178,12 @@ section {
 }
 
 /* FAQ Section */
+#faq {
+  min-height: 90vh;
+}
+
 .faq {
-  width: 90%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
@@ -215,14 +219,28 @@ details p {
 }
 
 /* Footer */
-footer p {
+.footer p {
   color: var(--accent);
   text-align: center;
   margin-bottom: 0.5rem;
 }
 
-footer a {
+.footer a {
   text-decoration: underline;
+}
+
+@media only screen and (min-width: 800px) {
+  .snap-scrolling {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+
+  .snap-scrolling section {
+    scroll-snap-align: start;
+  }
 }
 
 @keyframes sweep {
@@ -239,7 +257,7 @@ footer a {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   header {
     justify-content: center;
     position: absolute;
@@ -266,5 +284,13 @@ footer a {
 
   .highlights article {
     width: fit-content;
+  }
+
+  .faq {
+    min-width: 85%;
+  }
+
+  .footer {
+    margin-top: 3rem;
   }
 }
