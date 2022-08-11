@@ -1,4 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&display=swap');
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: url("fonts/roboto-v30-latin-300.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/roboto-v30-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("fonts/roboto-v30-latin-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("fonts/roboto-v30-latin-700.woff2") format("woff2");
+}
 
 :root {
   --background: #161316;
@@ -13,9 +39,10 @@ html {
 
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
   background-color: var(--background);
   color: var(--text);
-  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.06rem;
 }
 
 a {
@@ -23,34 +50,34 @@ a {
   text-decoration: none;
 }
 
-#header {
+p {
+  line-height: 1.5;
+}
+
+header {
   position: fixed;
-  box-sizing: border-box;
-  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: var(--background);
-  padding: 0 5vw;
-  padding-top: 5vh;
-  padding-bottom: 2vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1.5rem 2.5rem 1.5rem 2rem;
 }
 
-#brand {
-  height: 2rem;
-  content: url('assets/brand.svg');
-  margin-left: 0.5em;
+nav {
+  display: flex;
+  column-gap: 2.5rem;
 }
 
-#navbar a {
+nav a {
   color: var(--text);
   text-transform: uppercase;
-  text-decoration: none;
-  font-size: 1.8rem;
-  margin: 0 1rem;
+  font-size: 1.6rem;
 }
 
-.container {
+section {
   min-height: 100vh;
   width: 100vw;
   max-width: 100%;
@@ -59,32 +86,29 @@ a {
   justify-content: center;
   align-items: center;
 }
-/* startpage */
-#get #download {
+
+/* Start Page */
+.download-links {
   display: flex;
-  justify-content: center;
+  column-gap: 3rem;
 }
 
-#get h1 {
+.download h1 {
   text-transform: uppercase;
-  margin-bottom: 5vh;
+  margin-bottom: 2rem;
   font-size: 3rem;
 }
 
-#get #download a img {
-  width: 15em;
-  margin: 0 0.5em;
+.download-links img {
+  width: 15rem;
 }
-/* about secion */
+
+/* About Section */
 #about {
-  justify-content: space-between;
+  padding-top: 1rem;
 }
 
-#slogan {
-  margin-top: 42vh;
-}
-
-#slogan h1 {
+.slogan h1 {
   font-size: 4.2rem;
   text-align: center;
   text-transform: uppercase;
@@ -92,72 +116,66 @@ a {
   margin: 0;
 }
 
-#slogan .light {
+.slogan .light {
   font-weight: 300;
 }
 
-#about #about-bottom {
+.about-bottom {
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin: 2em 1em;
+  row-gap: 1rem;
 }
 
-#donate {
-  padding: 1em 1.8em;
-  margin-bottom: 1em;
+.donate {
+  padding: 1rem 1.5rem;
   font-weight: 700;
-  display: inline-block;
-  border: 0.2em solid var(--grey);
+  border: 0.2rem solid var(--grey);
   border-radius: 3rem;
 }
 
-#about #sociallinks {
-  padding: 1.9em;
+.social-links {
+  padding: 1.3rem 2.5rem;
   display: flex;
-  border: 0.2em solid var(--grey);
+  column-gap: 2.5rem;
+  border: 0.2rem solid var(--grey);
   border-radius: 3rem;
 }
 
-#about #sociallinks a img {
-  width: 2em;
-  max-width: 7vw;
-  margin: 0 1em;
-  height: auto;
+.social-links img {
+  width: 2rem;
   filter: invert() brightness(0.9);
 }
 
-#about #sociallinks a img:hover {
+.social-links img:hover {
   transform: scale(1.2);
 }
-/* features */
-#features #highlights {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: auto auto auto;
+
+/* Features Section */
+.highlights {
+  max-width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding-top: 3rem;
 }
 
-#features #highlights div {
-  padding: 16px 32px;
-  margin: 8px 12px;
-  border: 0.3em solid var(--grey);
-  border-radius: 3em;
-}
-/* faq */
-#faq {
-  min-height: 90vh;
+.highlights article {
+  width: 25%;
+  padding: 0.5rem 1.8rem;
+  border: 0.2rem solid var(--grey);
+  border-radius: 3rem;
 }
 
-#faq div {
+/* FAQ Section */
+.faq {
   width: 90%;
-  max-width: 1200px;
-  margin: 0.5em 5%;
-}
-
-details {
-  margin: 0.7em 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  padding-top: 5rem;
 }
 
 details summary {
@@ -166,12 +184,16 @@ details summary {
   font-weight: 500;
   cursor: pointer;
   border: 0.15em solid var(--grey);
-  padding: 1.5em 2em;
-  border-radius: 1.5em;
+  padding: 1.5rem 2.5rem;
+  border-radius: 2rem;
 }
 
 details summary::-webkit-details-marker {
   display: none;
+}
+
+details[open]:first-child {
+  margin-top: 2rem;
 }
 
 details[open] summary ~ p {
@@ -181,60 +203,18 @@ details[open] summary ~ p {
 details p {
   font-size: 1.3rem;
   overflow-wrap: break-word;
-  padding: 0 0.7em;
-}
-/* footer */
-#footer {
-  text-align: center;
+  padding: 0 1.5rem;
 }
 
-#footer p {
-  line-height: 1.5;
+/* Footer */
+footer p {
   color: var(--accent);
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
-#footer p a {
-  box-shadow: 0 1px var(--accent);
-}
-/* for mobile devices */
-@media only screen and (max-width: 800px) {
-  #header {
-    justify-content: center;
-    position: absolute;
-  }
-
-  #navbar {
-    display: none;
-  }
-
-  #get #download {
-    flex-direction: column;
-    max-width: 90vw;
-  }
-
-  #get #download a img {
-    height: 13vh;
-    width: auto;
-  }
-
-  #features #highlights {
-    display: flex;
-    flex-direction: column;
-  }
-}
-@media only screen and (min-width: 800px) {
-  .snap-scrolling {
-    width: 100vw;
-    height: 100vh;
-    scroll-snap-type: y mandatory;
-    scroll-snap-type: mandatory;
-    overflow-y: auto;
-    scroll-behavior: smooth;
-  }
-
-  .snap-scrolling > section {
-    scroll-snap-align: start;
-  }
+footer a {
+  text-decoration: underline;
 }
 
 @keyframes sweep {
@@ -248,5 +228,35 @@ details p {
     opacity: 1;
     margin-left: 0px;
     margin-right: 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    justify-content: center;
+    position: absolute;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .download-links {
+    flex-direction: column;
+    row-gap: 0.7rem;
+  }
+
+  .social-links {
+    column-gap: 1.7rem;
+  }
+
+  .highlights {
+    padding: 0;
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  .highlights article {
+    width: fit-content;
   }
 }
