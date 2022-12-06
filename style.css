@@ -125,18 +125,11 @@ section:not(:last-child) {
 }
 
 .about-bottom {
-  margin-top: 2rem;
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 1rem;
-}
-
-.donate {
-  padding: 1rem 1.5rem;
-  font-weight: 700;
-  border: 0.2rem solid var(--grey);
-  border-radius: 3rem;
 }
 
 .social-links {
