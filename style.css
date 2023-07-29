@@ -52,12 +52,25 @@ body {
 a {
   color: var(--accent);
   text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+nav > a:hover {
+  border-bottom: 2px solid var(--accent);
 }
 
 p {
   line-height: 1.5;
 }
 
+.logo {
+  width: 3rem;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 header {
   position: fixed;
   top: 0;
@@ -79,6 +92,10 @@ nav a {
   color: var(--text);
   text-transform: uppercase;
   font-size: 1.5rem;
+}
+
+gh {
+  width: 5rem;
 }
 
 section:not(:last-child) {
