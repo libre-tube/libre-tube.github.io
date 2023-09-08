@@ -149,13 +149,19 @@ section:not(:last-child) {
   row-gap: 1rem;
 }
 
+.donate {
+  padding: 1rem 1.5rem;
+  font-weight: 700;
+  border: 0.2rem solid var(--grey);
+  border-radius: 3rem;
+}
+
 .social-links {
   padding: 1.3rem 2.5rem;
   display: flex;
   column-gap: 2.5rem;
   border: 0.2rem solid var(--grey);
   border-radius: 3rem;
-  z-index: -1;
 }
 
 .social-links img {

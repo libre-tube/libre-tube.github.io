@@ -1,212 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="An alternative YouTube front end for Android."
+    />
+    <link rel="icon" href="icons/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>LibreTube</title>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="An alternative YouTube front end for Android." />
-  <link rel="icon" href="icons/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="style.css" />
-  <title>LibreTube</title>
-</head>
-
-<body>
-  <header>
-    <div class="logo-container">
-      <img class="logo" src="./images/icon.png" alt="logo">
-      <img src="images/brand.svg" alt="LibreTube" />
-    </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#features">Features</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-  </header>
-
-  <main class="snap-scrolling">
-    <section class="download">
-      <h1>GET IT NOW!</h1>
-
-      <div class="download-links">
-        <a href="https://github.com/libre-tube/LibreTube/releases/latest">
-          <img src="assets/badges/ghload.png" alt="GitHub Download" />
-        </a>
-        <a href="https://f-droid.org/en/packages/com.github.libretube">
-          <img src="assets/badges/fdrload.png" alt="F-Droid Download" />
-        </a>
-        <a href="https://apt.izzysoft.de/fdroid/index/apk/com.github.libretube">
-          <img src="assets/badges/izzyload.png" alt="Izzy Download" />
-        </a>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img class="logo" src="./images/icon.png" alt="logo" />
+        <img src="images/brand.svg" alt="LibreTube" />
       </div>
-    </section>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
 
-    <section id="about">
-      <div class="slogan">
-        <h1>Privacy</h1>
-        <h1 class="light">Simplified</h1>
-      </div>
+    <main class="snap-scrolling">
+      <section class="download">
+        <h1>GET IT NOW!</h1>
 
-      <div class="about-bottom">
-        <div class="social-links">
-          <a href="https://matrix.to/#/#LibreTube:matrix.org">
-            <img src="icons/matrix.svg" alt="Matrix" />
+        <div class="download-links">
+          <a href="https://github.com/libre-tube/LibreTube/releases/latest">
+            <img src="assets/badges/ghload.png" alt="GitHub Download" />
           </a>
-          <a rel="me" href="https://fosstodon.org/@libretube">
-            <img src="icons/mastodon.svg" alt="mastodon" />
+          <a href="https://f-droid.org/en/packages/com.github.libretube">
+            <img src="assets/badges/fdrload.png" alt="F-Droid Download" />
           </a>
-          <a href="https://t.me/libretube">
-            <img src="icons/telegram.svg" alt="Telegram" />
+          <a
+            href="https://apt.izzysoft.de/fdroid/index/apk/com.github.libretube"
+          >
+            <img src="assets/badges/izzyload.png" alt="Izzy Download" />
           </a>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="features">
-      <div class="highlights">
-        <article>
-          <h2>Ad-free, forever</h2>
-          <p>
-            Watch videos without being interrupted by ads and product
-            placements.
-          </p>
-        </article>
+      <section id="about">
+        <div class="slogan">
+          <h1>Privacy</h1>
+          <h1 class="light">Simplified</h1>
+        </div>
 
-        <article>
-          <h2>Privacy friendly</h2>
-          <p>
-            We don't use any Google services, nor save user data and use any
-            trackers.
-          </p>
-        </article>
+        <div class="about-bottom">
+          <a
+            href="https://github.com/libre-tube/LibreTube#donations"
+            class="donate"
+          >
+            Donate to LibreTube Team
+          </a>
 
-        <article>
-          <h2>Lightweight</h2>
-          <p>
-            The app is built with Material Design 3 (also known as Material
-            You), therefore usage feels very smooth.
-          </p>
-        </article>
+          <div class="social-links">
+            <a href="https://matrix.to/#/#LibreTube:matrix.org">
+              <img src="icons/matrix.svg" alt="Matrix" />
+            </a>
+            <a rel="me" href="https://fosstodon.org/@libretube">
+              <img src="icons/mastodon.svg" alt="mastodon" />
+            </a>
+            <a href="https://feddit.rocks/c/libretube">
+              <img src="icons/lemmy.svg" alt="Lemmy" style="scale: 1.8" />
+            </a>
+          </div>
+        </div>
+      </section>
 
-        <article>
-          <h2>Free and Open Source</h2>
-          <p>
-            LibreTube is licensed under the GPL-3.0, which is a copylefted
-            libre license. Use, study, change and share; with all.
-          </p>
-        </article>
+      <section id="features">
+        <div class="highlights">
+          <article>
+            <h2>Ad-free, forever</h2>
+            <p>
+              Watch videos without being interrupted by ads and product
+              placements.
+            </p>
+          </article>
 
-        <article>
-          <h2>Subscriptions</h2>
-          <p>
-            Subscribe to channels to never miss out the latest videos of your
-            favorite content creators.
-          </p>
-        </article>
+          <article>
+            <h2>Privacy friendly</h2>
+            <p>
+              We don't use any Google services, nor save user data and use any
+              trackers.
+            </p>
+          </article>
 
-        <article>
-          <h2>Experience the difference</h2>
-          <p>
-            The app supports SponsorBlock, video chapters, user playlists and
-            much more!
-          </p>
-        </article>
-      </div>
-    </section>
-    <section id="faq">
-      <div class="faq">
-        <details>
-          <summary>What is the goal of the project?</summary>
-          <p>
-            YouTube has an extremely invasive privacy policy which relies on
-            using user data in unethical ways. You give them a lot of data -
-            ranging from ideas, music taste, content, political opinions, and
-            much more than you think. <br />
-            By using LibreTube, you can freely watch and listen to content
-            without the fear of prying eyes watching everything you are doing.
-            Apart from that the Piped proxies can bypass geo restrictions,
-            therefore LibreTube can be used in countries where YouTube is
-            blocked.
-          </p>
-        </details>
+          <article>
+            <h2>Lightweight</h2>
+            <p>
+              The app is built with Material Design 3 (also known as Material
+              You), therefore usage feels very smooth.
+            </p>
+          </article>
 
-        <details>
-          <summary>Is it possible to log in with a Google account?</summary>
-          <p>
-            Google accounts are not supported and never will be, however
-            importing subscriptions from YouTube is possible.<br />
-            Explore the FAQ to learn more about the process of importing
-            subscriptions.
-          </p>
-        </details>
+          <article>
+            <h2>Free and Open Source</h2>
+            <p>
+              LibreTube is licensed under the GPL-3.0, which is a copylefted
+              libre license. Use, study, change and share; with all.
+            </p>
+          </article>
 
-        <details>
-          <summary>How can I import my subscriptions from YouTube?</summary>
-          <p>
-            1. Go to Google's
-            <a href="https://takeout.google.com/" target="_blank">Takeout Page</a>. <br />
-            2. Select <b>only</b> YouTube and YouTube Music. <br />
-            3. Choose only <b>Subscriptions</b> Under the
-            <b>All data included</b> section. <br />
-            4. Create Export and Download the zip. <br />
-            5. Extract the zip and locate the <b>subscriptions.csv</b> file.
-            <br />
-            6. Open LibreTube and navigate to Settings &gt; Backup &amp; restore &gt;
-            Import subscriptions. <br />
-            7. Select the <strong>subscriptions.csv</strong> (may be named in
-            the language of your YT account instead) file.
-          </p>
-        </details>
+          <article>
+            <h2>Subscriptions</h2>
+            <p>
+              Subscribe to channels to never miss out the latest videos of your
+              favorite content creators.
+            </p>
+          </article>
 
-        <details>
-          <summary>How can I contribute to LibreTube?</summary>
-          <p>
-            Whether you have ideas, translations, design changes, code
-            cleaning, or real heavy code changes, help is always welcome. The
-            more is done the better it gets! <br />
-            If you're interested in contributing, you can browse the
-            <a href="https://github.com/libre-tube/LibreTube/issues" target="_blank">issues</a>
-            or create a new one to discuss your feature idea. Every
-            contribution is very welcome.
-          </p>
-        </details>
+          <article>
+            <h2>Experience the difference</h2>
+            <p>
+              The app supports SponsorBlock, video chapters, user playlists and
+              much more!
+            </p>
+          </article>
+        </div>
+      </section>
+      <section id="faq">
+        <div class="faq">
+          <details>
+            <summary>What is the goal of the project?</summary>
+            <p>
+              YouTube has an extremely invasive privacy policy which relies on
+              using user data in unethical ways. You give them a lot of data -
+              ranging from ideas, music taste, content, political opinions, and
+              much more than you think. <br />
+              By using LibreTube, you can freely watch and listen to content
+              without the fear of prying eyes watching everything you are doing.
+              Apart from that the Piped proxies can bypass geo restrictions,
+              therefore LibreTube can be used in countries where YouTube is
+              blocked.
+            </p>
+          </details>
 
-        <details>
-          <summary>Help! My language is not supported</summary>
-          <p>
-            You can help translating the app in the language you speak
-            <a href="https://hosted.weblate.org/projects/libretube/libretube/" target="_blank">here</a>.
-          </p>
-        </details>
-      </div>
-    </section>
+          <details>
+            <summary>Is it possible to log in with a Google account?</summary>
+            <p>
+              Google accounts are not supported and never will be, however
+              importing subscriptions from YouTube is possible.<br />
+              Explore the FAQ to learn more about the process of importing
+              subscriptions.
+            </p>
+          </details>
 
-    <section class="footer">
-      <p>
-        Designed by <a href="https://github.com/XelXen/">XelXen</a> &amp;
-        <a href="https://github.com/Bnyro/">Bnyro</a><br />
-        Copyright &copy; <span id="year"></span>
-      </p>
-    </section>
-  </main>
+          <details>
+            <summary>How can I import my subscriptions from YouTube?</summary>
+            <p>
+              1. Go to Google's
+              <a href="https://takeout.google.com/" target="_blank"
+                >Takeout Page</a
+              >. <br />
+              2. Select <b>only</b> YouTube and YouTube Music. <br />
+              3. Choose only <b>Subscriptions</b> Under the
+              <b>All data included</b> section. <br />
+              4. Create Export and Download the zip. <br />
+              5. Extract the zip and locate the <b>subscriptions.csv</b> file.
+              <br />
+              6. Open LibreTube and navigate to Settings &gt; Backup &amp;
+              restore &gt; Import subscriptions. <br />
+              7. Select the <strong>subscriptions.csv</strong> (may be named in
+              the language of your YT account instead) file.
+            </p>
+          </details>
 
-  <script>
-    // Fetch all the details element
-    const details = document.querySelectorAll("details");
+          <details>
+            <summary>How can I contribute to LibreTube?</summary>
+            <p>
+              Whether you have ideas, translations, design changes, code
+              cleaning, or real heavy code changes, help is always welcome. The
+              more is done the better it gets! <br />
+              If you're interested in contributing, you can browse the
+              <a
+                href="https://github.com/libre-tube/LibreTube/issues"
+                target="_blank"
+                >issues</a
+              >
+              or create a new one to discuss your feature idea. Every
+              contribution is very welcome.
+            </p>
+          </details>
 
-    // Add the onclick listeners
-    details.forEach((targetDetail) => {
-      targetDetail.addEventListener("click", () => {
-        // Close all the details that are not targetDetail
-        details.forEach((detail) => {
-          if (detail !== targetDetail) {
-            detail.removeAttribute("open");
-          }
+          <details>
+            <summary>Help! My language is not supported</summary>
+            <p>
+              You can help translating the app in the language you speak
+              <a
+                href="https://hosted.weblate.org/projects/libretube/libretube/"
+                target="_blank"
+                >here</a
+              >.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section class="footer">
+        <p>
+          Designed by <a href="https://github.com/XelXen/">XelXen</a> &amp;
+          <a href="https://github.com/Bnyro/">Bnyro</a><br />
+          Copyright &copy; <span id="year"></span>
+        </p>
+      </section>
+    </main>
+
+    <script>
+      // Fetch all the details element
+      const details = document.querySelectorAll("details");
+
+      // Add the onclick listeners
+      details.forEach((targetDetail) => {
+        targetDetail.addEventListener("click", () => {
+          // Close all the details that are not targetDetail
+          details.forEach((detail) => {
+            if (detail !== targetDetail) {
+              detail.removeAttribute("open");
+            }
+          });
         });
       });
-    });
 
-    document.querySelector("#year").textContent = new Date().getFullYear();
-  </script>
-</body>
-
+      document.querySelector("#year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
