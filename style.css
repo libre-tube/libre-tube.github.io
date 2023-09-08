@@ -155,6 +155,7 @@ section:not(:last-child) {
   column-gap: 2.5rem;
   border: 0.2rem solid var(--grey);
   border-radius: 3rem;
+  z-index: -1;
 }
 
 .social-links img {
