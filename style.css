@@ -116,8 +116,15 @@ section:not(:last-child) {
 
 .download h1 {
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
   font-size: 3rem;
+}
+
+.download h2 {
+  text-align: center;
+  margin: 0 1rem;
+  margin-bottom: 1rem;
 }
 
 .download-links img {
