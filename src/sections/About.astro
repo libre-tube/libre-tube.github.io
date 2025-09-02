@@ -1,0 +1,90 @@
+---
+import Lemmy from "../assets/icons/lemmy.astro";
+import Mastodon from "../assets/icons/mastodon.astro";
+import Matrix from "../assets/icons/matrix.astro";
+import DonateButton from "../components/DonateButton.astro";
+---
+
+<section id="about">
+  <span>
+    <h1>Privacy</h1>
+    <h2>Simplified</h2>
+  </span>
+  <div class="about-bottom">
+    <DonateButton />
+    <article class="social-links">
+      <a
+        href="https://matrix.to/#/#LibreTube:matrix.org"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Matrix />
+      </a>
+      <a
+        href="https://fosstodon.org/@libretube"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Mastodon />
+      </a>
+      <a
+        href="https://feddit.rocks/c/libretube"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Lemmy />
+      </a>
+    </article>
+  </div>
+</section>
+
+<style>
+  /* About Section */
+  #about {
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  h1,
+  h2 {
+    font-size: 4.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+  }
+
+  h2 {
+    font-weight: 300;
+  }
+
+  .about-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+  }
+
+  .social-links {
+    padding: 1.3rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    border: 0.2rem solid var(--grey);
+    border-radius: 3rem;
+  }
+
+  .social-links a:hover {
+    transform: scale(1.2);
+  }
+
+  @media screen and (max-width: 800px) {
+    .social-links {
+      column-gap: 1.7rem;
+    }
+  }
+</style>
