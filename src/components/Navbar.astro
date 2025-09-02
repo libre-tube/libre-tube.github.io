@@ -1,0 +1,55 @@
+---
+import LibreTubeLogo from "../assets/images/LibreTubeLogo.astro";
+import LibreTubeBrand from "../assets/images/LibreTubeBrand.astro";
+import NavLink from "./NavLink.astro";
+---
+
+<header>
+  <a href="/">
+    <span>
+      <LibreTubeLogo />
+      <LibreTubeBrand />
+    </span>
+  </a>
+  <nav>
+    <NavLink href="#about" title="About" />
+    <NavLink href="#features" title="Features" />
+    <NavLink href="#faq" title="FAQ" />
+  </nav>
+</header>
+
+<style>
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--background);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5rem;
+  }
+
+  nav {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    header {
+      justify-content: center;
+      position: absolute;
+    }
+
+    nav {
+      display: none;
+    }
+  }
+</style>

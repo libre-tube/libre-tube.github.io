@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+import About from "../sections/about.astro";
+import Download from "../sections/download.astro";
+import FAQ from "../sections/FAQ.astro";
+import Features from "../sections/Features.astro";
+---
+
+<Layout>
+  <Download />
+  <About />
+  <Features />
+  <FAQ />
+</Layout>
+
+<style>
+  @media screen and (max-width: 800px) {
+    .download-links {
+      flex-direction: column;
+      row-gap: 0.7rem;
+    }
+
+    .social-links {
+      column-gap: 1.7rem;
+    }
+
+    .highlights {
+      padding: 0;
+      flex-direction: column;
+      max-width: 90%;
+    }
+
+    .highlights article {
+      width: fit-content;
+    }
+
+    .faq {
+      min-width: 85%;
+    }
+  }
+</style>

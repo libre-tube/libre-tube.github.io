@@ -1,0 +1,23 @@
+---
+interface Props {
+  style?: string;
+}
+
+const { style } = Astro.props;
+---
+
+<article class="card" style={`${style}`}>
+  <slot />
+</article>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 1.5rem 1.5rem;
+    border: 0.2rem solid var(--grey);
+    border-radius: 2rem;
+    gap: 1rem;
+  }
+</style>

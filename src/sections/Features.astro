@@ -1,0 +1,86 @@
+---
+import Card from "../components/Card.astro";
+---
+
+<section id="features">
+  <div class="highlights">
+    <Card>
+      <h2>Ad-free, forever</h2>
+      <p>
+        Watch videos without being interrupted by ads and product placements.
+      </p>
+    </Card>
+
+    <Card>
+      <h2>Privacy friendly</h2>
+      <p>
+        We don't use any Google services, nor save user data and use any
+        trackers.
+      </p>
+    </Card>
+
+    <Card>
+      <h2>Lightweight</h2>
+      <p>
+        The app is built with Material Design 3 (also known as Material You),
+        therefore usage feels very smooth.
+      </p>
+    </Card>
+
+    <Card>
+      <h2>Free and Open Source</h2>
+      <p>
+        LibreTube is licensed under the GPL-3.0, which is a copylefted libre
+        license. Use, study, change and share; with all.
+      </p>
+    </Card>
+
+    <Card>
+      <h2>Subscriptions</h2>
+      <p>
+        Subscribe to channels to never miss out the latest videos of your
+        favorite content creators.
+      </p>
+    </Card>
+
+    <Card>
+      <h2>Experience the difference</h2>
+      <p>
+        The app supports SponsorBlock, video chapters, user playlists and much
+        more!
+      </p>
+    </Card>
+  </div>
+</section>
+
+<style>
+  /* Features Section */
+  .highlights {
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: 0 clamp(0, 3vw, 2rem);
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding-top: 3rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    .highlights {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      max-width: 90%;
+    }
+  }
+</style>

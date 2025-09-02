@@ -1,0 +1,74 @@
+---
+import Github from "../assets/icons/Github.astro";
+import FDroid from "../assets/icons/FDroid.astro";
+import Izzysoft from "../assets/icons/Izzysoft.astro";
+import DownloadButton from "../components/DownloadButton.astro";
+import LibreTubeLogo from "../assets/icons/libretube.astro";
+---
+
+<section class="download">
+  <LibreTubeLogo />
+  <br />
+  <br />
+  <h1>GET IT NOW!</h1>
+  <h2>An alternative frontend for YouTube, for Android.</h2>
+  <div class="download-links">
+    <DownloadButton
+      href="https://github.com/libre-tube/LibreTube/releases/latest"
+    >
+      <Github />
+      DOWNLOAD
+    </DownloadButton>
+    <DownloadButton href="https://f-droid.org/en/packages/com.github.libretube">
+      <FDroid />
+      DOWNLOAD
+    </DownloadButton>
+    <DownloadButton
+      href="https://apt.izzysoft.de/fdroid/index/apk/com.github.libretube"
+    >
+      <Izzysoft />
+      DOWNLOAD
+    </DownloadButton>
+  </div>
+</section>
+
+<style>
+  /* Start Page */
+  .download {
+    background-image: radial-gradient(
+      circle 1000px at 95% -25%,
+      rgb(247, 159, 169) 0%,
+      rgba(22, 19, 22, 1) 100%
+    );
+  }
+  .download-links {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .download h1 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+  }
+
+  .download h2 {
+    text-align: center;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .download-links img {
+    width: 15rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    .download-links {
+      flex-direction: column;
+      row-gap: 0.7rem;
+    }
+  }
+</style>

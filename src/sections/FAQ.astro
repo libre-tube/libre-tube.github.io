@@ -1,0 +1,89 @@
+---
+import Details from "../components/Details.astro";
+---
+
+<section id="faq">
+  <div class="faq">
+    <Details title="What is the goal of the project?">
+      YouTube has an extremely invasive privacy policy which relies on using
+      user data in unethical ways. You give them a lot of data - ranging from
+      ideas, music taste, content, political opinions, and much more than you
+      think. <br />
+      By using LibreTube, you can freely watch and listen to content without the
+      fear of prying eyes watching everything you are doing. Apart from that the
+      Piped proxies can bypass geo restrictions, therefore LibreTube can be used
+      in countries where YouTube is blocked.
+    </Details>
+    <Details title="Is it possible to log in with a Google account?">
+      Google accounts are not supported and never will be, however importing
+      subscriptions from YouTube is possible.<br />
+      Explore the FAQ to learn more about the process of importing subscriptions.
+    </Details>
+    <Details title="How can I import my subscriptions from YouTube?">
+      1. Go to Google's
+      <a href="https://takeout.google.com/" target="_blank">Takeout Page</a>. <br
+      />
+      2. Select <b>only</b> YouTube and YouTube Music. <br />
+      3. Choose only <b>Subscriptions</b> Under the
+      <b>All data included</b> section. <br />
+      4. Create Export and Download the zip. <br />
+      5. Extract the zip and locate the <b>subscriptions.csv</b> file.
+      <br />
+      6. Open LibreTube and navigate to Settings &gt; Backup &amp; restore &gt; Import
+      subscriptions. <br />
+      7. Select the <strong>subscriptions.csv</strong> (may be named in the language
+      of your YT account instead) file.
+    </Details>
+    <Details title="How can I contribute to LibreTube?">
+      Whether you have ideas, translations, design changes, code cleaning, or
+      real heavy code changes, help is always welcome. The more is done the
+      better it gets! <br />
+      If you're interested in contributing, you can browse the
+      <a href="https://github.com/libre-tube/LibreTube/issues" target="_blank"
+        >issues</a
+      >
+      or create a new one to discuss your feature idea. Every contribution is very
+      welcome.
+    </Details>
+    <Details title="Help! My language is not supported">
+      You can help translating the app in the language you speak
+      <a
+        href="https://hosted.weblate.org/projects/libretube/libretube/"
+        target="_blank">here</a
+      >.
+    </Details>
+    <Details title="Where are downloaded files stored?">
+      Downloaded files are stored in external private storage (<code
+        >Android/data/com.github.libretube</code
+      >).<br />
+      Note that since Android 11, the <code>READ_EXTERNAL_STORAGE</code>
+      permission does not grant third party apps access to external private storage,
+      requiring workarounds.<br />
+      The (usually hidden, not to be confused with Files by Google) Android built-in
+      Files app will always have access to this directory. <br />
+      In the downloaded files, audio and video are separated. Hence it is recommended
+      to exclusively use LibreTube for playing downloaded media.
+    </Details>
+  </div>
+</section>
+
+<style>
+  /* FAQ Section */
+  #faq {
+    min-height: 90vh;
+  }
+
+  .faq {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    padding-top: 5rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    .faq {
+      min-width: 85%;
+    }
+  }
+</style>

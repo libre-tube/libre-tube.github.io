@@ -1,0 +1,140 @@
+---
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>LibreTube</title>
+
+    <meta
+      name="description"
+      content="An alternative frontend for YouTube, for Android."
+    />
+
+    <meta property="og:url" content="https://libre-tube.github.io" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="LibreTube" />
+    <meta
+      property="og:description"
+      content="An alternative frontend for YouTube, for Android."
+    />
+    <meta property="og:image" content="../assets/banners/banner.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="libre-tube.github.io" />
+    <meta property="twitter:url" content="https://libre-tube.github.io" />
+    <meta name="twitter:title" content="LibreTube" />
+    <meta
+      name="twitter:description"
+      content="An alternative frontend for YouTube, for Android."
+    />
+    <meta name="twitter:image" content="../assets/banners/banner.png" />
+  </head>
+  <body>
+    <Navbar />
+    <main>
+      <slot />
+      <Footer />
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("../assets/fonts/roboto-v30-latin-300.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../assets/fonts/roboto-v30-latin-regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("../assets/fonts/roboto-v30-latin-500.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../assets/fonts/roboto-v30-latin-700.woff2") format("woff2");
+  }
+
+  :root {
+    --background: #161316;
+    --accent: #ffbbaa;
+    --text: #ffffff;
+    --grey: dimgrey;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  body {
+    position: relative;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    letter-spacing: 0.06rem;
+    transition: all ease-in-out 100ms;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+  }
+
+  section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media only screen and (min-width: 800px) {
+    main {
+      width: 100vw;
+      height: 100vh;
+      scroll-snap-type: y mandatory;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+    }
+
+    main section {
+      scroll-snap-align: start;
+    }
+  }
+</style>
