@@ -20,7 +20,7 @@ import NavLink from "./NavLink.astro";
 
 <style>
   header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
@@ -28,7 +28,8 @@ import NavLink from "./NavLink.astro";
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 5rem;
+    padding: 0 5rem;
+    height: 5rem;
   }
 
   nav {
@@ -45,7 +46,7 @@ import NavLink from "./NavLink.astro";
   @media screen and (max-width: 800px) {
     header {
       justify-content: center;
-      position: absolute;
+      position: sticky;
     }
 
     nav {

@@ -7,9 +7,7 @@ import LibreTubeLogo from "../assets/icons/libretube.astro";
 ---
 
 <section class="download">
-  <LibreTubeLogo />
-  <br />
-  <br />
+  <div id="logo"><LibreTubeLogo /></div>
   <h1>GET IT NOW!</h1>
   <h2>An alternative frontend for YouTube, for Android.</h2>
   <div class="download-links">
@@ -40,7 +38,9 @@ import LibreTubeLogo from "../assets/icons/libretube.astro";
       rgb(247, 159, 169) 0%,
       rgba(22, 19, 22, 1) 100%
     );
+    padding-block: 3rem;
   }
+
   .download-links {
     display: flex;
     gap: 3rem;
@@ -70,5 +70,9 @@ import LibreTubeLogo from "../assets/icons/libretube.astro";
       flex-direction: column;
       row-gap: 0.7rem;
     }
+  }
+
+  #logo {
+    margin-bottom: 2rem;
   }
 </style>
